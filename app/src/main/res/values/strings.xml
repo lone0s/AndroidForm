@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AndroidForm</string>
+    <string name="startButton">Start</string>
 </resources>
