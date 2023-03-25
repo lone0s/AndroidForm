@@ -6,4 +6,10 @@
     <string name="logo_name">whoami</string>
     <string name="nameInput">who are you?</string>
     <string name="nameLabel">Name</string>
+    <string name="activity_name">GENERAL QUESTIONS</string>
+    <string name="ageLabel">Age</string>
+    <string name="status_choice_1">Unemployed</string>
+    <string name="status_label">Professional status</string>
+    <string name="status_choice_2">Teacher</string>
+    <string name="status_choice_3">Student</string>
 </resources>

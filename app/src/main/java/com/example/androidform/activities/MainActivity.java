@@ -1,10 +1,12 @@
-package com.example.androidform;
+package com.example.androidform.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+
+import com.example.androidform.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
                 (evt) ->
                 {
                     Log.d(MainActivity.LOGGER_TAG, "Start button clicked");
-                    Intent intent = new Intent(this, GeneralInformation.class);
+                    Intent intent = new Intent(this, GeneralQuestions1.class);
 
                     this.startActivity(intent);
                 }

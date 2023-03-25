@@ -17,13 +17,13 @@
             android:name=".Template"
             android:exported="false" />
         <activity
-            android:name=".GeneralInformation"
+            android:name=".activities.GeneralQuestions1"
             android:exported="false" />
         <activity
             android:name=".GenericQuestionActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
