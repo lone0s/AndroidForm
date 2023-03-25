@@ -1,10 +1,8 @@
 package com.example.androidform;
 
-import android.os.Bundle;
 import android.util.Pair;
 
 import com.example.androidform.core.Language;
-import com.example.androidform.questions.lib.Question;
 import com.example.androidform.questions.lib.RadioButtonQuestion;
 
 import java.util.HashMap;

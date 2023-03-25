@@ -17,7 +17,7 @@ public class SliderQuestion extends Question<Integer>{
 
     @NonNull
     @Override
-    public Integer getAnsweredText() {
+    public Integer getAnswer() {
         return null;
     }
 }
