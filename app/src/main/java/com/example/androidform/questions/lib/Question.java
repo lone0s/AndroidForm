@@ -8,12 +8,11 @@ import androidx.annotation.NonNull;
 import com.example.androidform.core.Language;
 
 import java.util.Collection;
-import java.util.Optional;
 
 /**
  * TODO : Extend to InputTexts & Sliders
  */
-public abstract class Question
+public abstract class Question<ReturnType>
 {
     @NonNull
     protected final View target;
@@ -40,5 +39,5 @@ public abstract class Question
     }
 
     @NonNull
-    public abstract Optional<String> getAnsweredText();
+    public abstract ReturnType getAnsweredText();
 }

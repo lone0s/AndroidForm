@@ -15,7 +15,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Optional;
 
-public class RadioButtonQuestion extends Question {
+public class RadioButtonQuestion extends Question<Short> {
 
     private RadioButtonQuestion(RadioGroup radioGroup, Collection<Pair<Language, Short>> values) {
         super((View) radioGroup, values);
@@ -51,8 +51,8 @@ public class RadioButtonQuestion extends Question {
 
     @NonNull
     @Override
-    public Optional<String> getAnsweredText() {
+    public Short getAnsweredText() {
         // TODO
-        return Optional.empty();
+        return null;
     }
 }
