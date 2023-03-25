@@ -37,6 +37,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         android:text="@string/nameInput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,5 +54,5 @@
         android:text="@string/nameLabel"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/nameInput"
-        tools:layout_editor_absoluteX="70dp" />
+        app:layout_constraintStart_toStartOf="@+id/nameInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
