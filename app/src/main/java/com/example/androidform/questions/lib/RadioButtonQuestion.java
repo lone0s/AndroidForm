@@ -43,14 +43,14 @@ public class RadioButtonQuestion extends Question<Short> {
         List<RadioButton> buttons = new ArrayList<>();
 
         answers.forEach(
-                (lbl, couple) ->
-                {
-                    RadioButton button = new RadioButton(context);
-                    button.setText(lbl);
-                    radioGroup.addView(button);
+            (lbl, couple) ->
+            {
+                RadioButton button = new RadioButton(context);
+                button.setText(lbl);
+                radioGroup.addView(button);
 
-                    buttons.add(button);
-                }
+                buttons.add(button);
+            }
         );
 
 

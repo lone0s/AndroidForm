@@ -6,4 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".GenericQuestionActivity">
 
+    <include
+        layout="@layout/activity_template"
+        android:layout_width="417dp"
+        android:layout_height="164dp"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="570dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

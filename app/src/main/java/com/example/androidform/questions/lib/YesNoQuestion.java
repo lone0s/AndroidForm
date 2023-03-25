@@ -14,8 +14,9 @@ import java.util.HashMap;
 public class YesNoQuestion extends Question<Boolean>
 {
 
-    protected YesNoQuestion(@NonNull View target, @NonNull Collection<Pair<Language, Short>> answers) {
-        super(target, answers);
+    protected YesNoQuestion(@NonNull View target)
+    {
+        super(target);
     }
 
     @NonNull
