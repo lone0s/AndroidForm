@@ -38,9 +38,4 @@ public abstract class Template extends AppCompatActivity {
      * Action to be performed when clicking the "Next" button
      * */
     protected abstract void nextButtonAction(View evt);
-
-
-    // Need onClickHandler pour next
-
-    // Need onClickHandler pour before
 }
