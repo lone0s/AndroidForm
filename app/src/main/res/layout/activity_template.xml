@@ -7,18 +7,22 @@
     tools:context=".Template">
 
     <Button
-        android:id="@+id/beforeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/beforeButton"
-        tools:layout_editor_absoluteX="58dp"
-        tools:layout_editor_absoluteY="617dp" />
-
-    <Button
         android:id="@+id/nextButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/nextButton"
-        tools:layout_editor_absoluteX="262dp"
-        tools:layout_editor_absoluteY="605dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/beforeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/beforeButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
