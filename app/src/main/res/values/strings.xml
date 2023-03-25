@@ -3,4 +3,5 @@
     <string name="startButton">Start</string>
     <string name="beforeButton">Before</string>
     <string name="nextButton">Next</string>
+    <string name="logo_name">whoami</string>
 </resources>
