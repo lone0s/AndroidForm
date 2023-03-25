@@ -8,9 +8,6 @@ import android.widget.Button;
 public abstract class Template extends AppCompatActivity {
     private final int layoutId;
 
-    private Button beforeButton;
-    private Button nextButton;
-
     public Template(int id) {
         this.layoutId = id;
     }
@@ -20,11 +17,9 @@ public abstract class Template extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
 
-        beforeButton = findViewById(R.id.beforeButton);
-        nextButton = findViewById(R.id.nextButton);
+        findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
+        findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
 
-        beforeButton.setOnClickListener(this::backButtonEventListener);
-        nextButton.setOnClickListener(this::nextButtonEventListener);
     }
 
     protected abstract void backButtonEventListener(View evt);
