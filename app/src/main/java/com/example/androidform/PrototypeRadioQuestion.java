@@ -9,7 +9,7 @@ import com.example.androidform.questions.lib.RadioButtonQuestion;
 
 import java.util.HashMap;
 
-public class PrototypeRadioQuestion extends GenericQuestionActivity
+public class PrototypeRadioQuestion extends GenericQuestionActivity<RadioButtonQuestion, Short>
 {
 
     @Override

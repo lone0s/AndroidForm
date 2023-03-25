@@ -10,14 +10,14 @@ import com.example.androidform.core.Language;
 import java.util.Collection;
 import java.util.Optional;
 
-public class SliderQuestion extends Question{
+public class SliderQuestion extends Question<Integer>{
     protected SliderQuestion(@NonNull View target, @NonNull Collection<Pair<Language, Short>> answers) {
         super(target, answers);
     }
 
     @NonNull
     @Override
-    public Optional<String> getAnsweredText() {
-        return Optional.empty();
+    public Integer getAnsweredText() {
+        return null;
     }
 }

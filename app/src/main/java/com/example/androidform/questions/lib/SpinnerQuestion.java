@@ -10,14 +10,14 @@ import com.example.androidform.core.Language;
 import java.util.Collection;
 import java.util.Optional;
 
-public class SpinnerQuestion extends Question{
+public class SpinnerQuestion extends Question<Short>{
     protected SpinnerQuestion(@NonNull View target, @NonNull Collection<Pair<Language, Short>> answers) {
         super(target, answers);
     }
 
     @NonNull
     @Override
-    public Optional<String> getAnsweredText() {
-        return Optional.empty();
+    public Short getAnsweredText() {
+        return null;
     }
 }

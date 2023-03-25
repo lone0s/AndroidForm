@@ -7,9 +7,9 @@ import android.widget.RadioGroup;
 
 import com.example.androidform.questions.lib.Question;
 
-public abstract class GenericQuestionActivity extends AppCompatActivity {
+public abstract class GenericQuestionActivity<QuestionType extends Question<Answers>, Answers> extends AppCompatActivity {
 
-    protected Question question;
+    protected QuestionType question;
 
     protected abstract void buildQuestion();
 
