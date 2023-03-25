@@ -13,7 +13,7 @@ public class GeneralInformation extends Template {
     }
 
     @Override
-    protected void backButtonEventListener(View evt) {
+    protected void backButtonAction(View evt) {
         Log.d(GeneralInformation.LOGGER_TAG, "Previous button clicked");
         Log.e(GeneralInformation.LOGGER_TAG, "NEW VIEW CREATED, NOT OPTIMAL");
         Intent intent = new Intent(this, MainActivity.class);
@@ -22,7 +22,7 @@ public class GeneralInformation extends Template {
     }
 
     @Override
-    protected void nextButtonEventListener(View evt) {
+    protected void nextButtonAction(View evt) {
         Log.d(GeneralInformation.LOGGER_TAG, "Next button clicked");
 //        Intent intent = new Intent(this, GeneralInformation.class);
 //
