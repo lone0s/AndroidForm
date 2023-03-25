@@ -37,6 +37,7 @@ public class DataContainer implements Parcelable {
         for (Short rustScore : this.rustScores) {
             reduce = reduce + rustScore;
         }
+
         return (short) reduce;
     }
 
