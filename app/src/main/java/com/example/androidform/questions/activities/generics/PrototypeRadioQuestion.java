@@ -5,12 +5,16 @@ import android.util.Log;
 import android.util.Pair;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
+import com.example.androidform.DataContainer;
 import com.example.androidform.GenericQuestionActivity;
 import com.example.androidform.MainActivity;
 import com.example.androidform.core.Language;
 import com.example.androidform.questions.lib.RadioButtonQuestion;
 
 import java.util.HashMap;
+import java.util.stream.Stream;
 
 public class PrototypeRadioQuestion extends GenericQuestionActivity<RadioButtonQuestion, Short>
 {
@@ -36,10 +40,25 @@ public class PrototypeRadioQuestion extends GenericQuestionActivity<RadioButtonQ
     protected void nextButtonAction(View evt) {
         Short answer = this.question.getAnswer();
         if (answer == null) return;
+        Log.d(PrototypeRadioQuestion.LOGGER_TAG, "User entered #" + this.question.getAnswer());
 
-        Intent next = new Intent(this, MainActivity.class);
-        Log.d(PrototypeRadioQuestion.LOGGER_TAG, "User enterded #" + this.question.getAnswer());
+        Log.d(PrototypeRadioQuestion.LOGGER_TAG, "Creating and updating DataContainer");
+        DataContainer dc = new DataContainer();
 
+        int[] answerScores = new int[11];
+        if (answer == 0) answerScores[0] = 0; // rustScore
+        if (answer == 1) answerScores[0] = 1; // rustScore
+        if (answer == 2) answerScores[0] = 2; // rustScore
+
+        dc.addScore(answerScores);
+
+
+        Intent next = new Intent(this, SecondRadioQuestion.class);
+
+        Log.d(PrototypeRadioQuestion.LOGGER_TAG, "Sending DataContainer to Intent");
+        next.putExtra("scores", dc);
+
+        Log.d(PrototypeRadioQuestion.LOGGER_TAG, "Launching activity SecondRadioQuestion");
         this.startActivity(next);
     }
 }

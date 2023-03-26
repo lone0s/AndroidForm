@@ -2,12 +2,17 @@ package com.example.androidform;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
+
+import androidx.annotation.NonNull;
+
+import java.util.Arrays;
 
 public final class DataContainer implements Parcelable {
-//    private @interface ParcelContent{}
 
     /**
      * length = 11;
+     *
      * index 0 = rust
      * index 1 = haskell
      * index 2 = caml
@@ -20,56 +25,71 @@ public final class DataContainer implements Parcelable {
      * index 9 = java
      * index 10 = cs
      */
-    private final int[][] scores; // length = 11
-    private final int questionIndex;
-//    @ParcelContent private int[] rustScores;
-//    @ParcelContent private int[] haskellScores;
-//    @ParcelContent private int[] camlScores;
-//    @ParcelContent private int[] malbogeScores;
-//    @ParcelContent private int[] cppScores;
-//    @ParcelContent private int[] pythonScores;
-//    @ParcelContent private int[] rScores;
-//    @ParcelContent private int[] jsScores;
-//    @ParcelContent private int[] phpScores;
-//    @ParcelContent private int[] javaScores;
-//    @ParcelContent private int[] csScores;
+    private final int[] scores; // length = 11
+
+    public DataContainer()
+    {
+        Log.d("DataContainer", "Creating new DataContainer");
+        this.scores = new int[11];
+    }
 
     public DataContainer(Parcel in)
     {
-        this.questionIndex = in.readInt() +1;
-        this.scores = new int[11][this.questionIndex];
-        for (int[] score : this.scores) {
-            in.readIntArray(score);
+        Log.d("DataContainer", "Reading DataContainer from Parcel");
+
+        this.scores = new int[11];
+        for (int i = 0; i < this.scores.length; i++)
+        {
+            this.scores[i] = in.readInt();
+        }
+
+        Log.d("DataContainer", "Retrieved data is " + Arrays.toString(this.scores));
+    }
+
+    /**
+     * length = 11;
+     *
+     * index 0 = rust
+     * index 1 = haskell
+     * index 2 = caml
+     * index 3 = malboge
+     * index 4 = cpp
+     * index 5 = python
+     * index 6 = r
+     * index 7 = js
+     * index 8 = php
+     * index 9 = java
+     * index 10 = cs
+     */
+    public void addScore(@NonNull final int[] score)
+    {
+        assert score.length == 11;
+
+        for (int i = 0; i < this.scores.length; i++) {
+            this.scores[i] = score[i];
         }
     }
 
-    public void addScore(final int score) // Simplifier en addScore(final Langage lang, final short score) ?
-    {
-//        this.rustScores[this.rustScores.length -1] = score;
-    }
-
-    public short computeResults()
+    public int[] getResults()
     {
         // Stream::reduce marche po
-        int reduce = 0;
-        for (Integer rustScore : this.scores[0]) {
-            reduce = reduce + rustScore;
-        }
-
-        return (short) reduce;
+        return Arrays.copyOf(this.scores, this.scores.length);
     }
 
 
     /** Parcelable impl **/
 
-    public static final Creator<DataContainer> CREATOR = new Creator<DataContainer>() {
+    public static final Creator<DataContainer> CREATOR = new Creator<DataContainer>()
+    {
         @Override
-        public DataContainer createFromParcel(Parcel in) {
+        public DataContainer createFromParcel(Parcel in)
+        {
             return new DataContainer(in);
         }
 
         @Override
-        public DataContainer[] newArray(int size) {
+        public DataContainer[] newArray(int size)
+        {
             return new DataContainer[size];
         }
     };
@@ -83,5 +103,10 @@ public final class DataContainer implements Parcelable {
     @Override
     public void writeToParcel(Parcel parcel, int i)
     {
+        Log.d("DataContainer", "Writing DataContainer to Parcel");
+
+        for (int score : this.scores) {
+            parcel.writeInt(score);
+        }
     }
 }

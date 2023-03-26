@@ -25,7 +25,7 @@ public abstract class GenericQuestionActivity<QuestionType extends Question<Answ
 
         this.addContentView(
             this.question.getComponent(),
-            new RadioGroup.LayoutParams(new ViewGroup.MarginLayoutParams(0, 0))
+            new RadioGroup.LayoutParams(new ViewGroup.MarginLayoutParams(-2, -2))
         );
     }
 }
