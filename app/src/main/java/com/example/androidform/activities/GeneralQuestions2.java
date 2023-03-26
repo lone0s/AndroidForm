@@ -72,6 +72,7 @@ public class GeneralQuestions2 extends Template {
         });
     }
 
+    //TODO : Fix weird bug, backbutton not working
     @Override
     protected void backButtonAction(View evt) {
         Log.d(GeneralQuestions2.LOGGER_TAG, "Previous button clicked");

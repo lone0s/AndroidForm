@@ -17,10 +17,8 @@ public abstract class Template extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
-
         findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
         findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
-
     }
 
     private void backButtonEventListener(View evt)
