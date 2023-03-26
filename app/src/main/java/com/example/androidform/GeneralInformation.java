@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
+import com.example.androidform.questions.activities.generics.PrototypeRadioQuestion;
+
 public class GeneralInformation extends Template {
 
     private static final String LOGGER_TAG = "General_Information";
@@ -24,8 +26,8 @@ public class GeneralInformation extends Template {
     @Override
     protected void nextButtonAction(View evt) {
         Log.d(GeneralInformation.LOGGER_TAG, "Next button clicked");
-//        Intent intent = new Intent(this, GeneralInformation.class);
-//
-//        this.startActivity(intent);
+        Intent intent = new Intent(this, PrototypeRadioQuestion.class);
+
+        this.startActivity(intent);
     }
 }

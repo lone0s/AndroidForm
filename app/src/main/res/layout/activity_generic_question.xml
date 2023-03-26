@@ -7,9 +7,13 @@
     tools:context=".GenericQuestionActivity">
 
     <include
+        android:id="@+id/include"
         layout="@layout/activity_template"
-        android:layout_width="417dp"
-        android:layout_height="164dp"
-        tools:layout_editor_absoluteX="-5dp"
-        tools:layout_editor_absoluteY="570dp" />
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
