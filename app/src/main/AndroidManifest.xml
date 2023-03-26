@@ -16,9 +16,9 @@
         <activity
             android:name=".activities.GeneralQuestions2"
             android:exported="false" />
-        <activity
+        <!--activity
             android:name=".Template"
-            android:exported="false" />
+            android:exported="false" /-->
         <activity
             android:name=".activities.GeneralQuestions1"
             android:exported="false" />
@@ -34,7 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PrototypeRadioQuestion" />
+        <activity android:name=".questions.activities.generics.PrototypeRadioQuestion" />
+        <activity android:name=".questions.activities.generics.SecondRadioQuestion" />
     </application>
 
 </manifest>

@@ -1,26 +1,32 @@
 package com.example.androidform;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+import android.text.Layout;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
 import com.example.androidform.R;
 import com.example.androidform.questions.lib.Question;
 
-public abstract class GenericQuestionActivity<QuestionType extends Question<Answers>, Answers> extends AppCompatActivity {
+public abstract class GenericQuestionActivity<QuestionType extends Question<Answers>, Answers> extends Template {
 
     protected QuestionType question;
+
+    public GenericQuestionActivity() {
+        super(R.layout.activity_generic_question);
+    }
 
     protected abstract void buildQuestion();
 
     @Override
-    protected final void onCreate(Bundle savedInstanceState)
+    public final void onCreateHook(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        this.setContentView(R.layout.activity_generic_question);
-
         this.buildQuestion();
-        this.addContentView(this.question.getComponent(), new RadioGroup.LayoutParams(-2, -2));
+
+        this.addContentView(
+            this.question.getComponent(),
+            new RadioGroup.LayoutParams(new ViewGroup.MarginLayoutParams(-2, -2))
+        );
     }
 }

@@ -2,66 +2,111 @@ package com.example.androidform;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import java.util.Collection;
+import java.util.Arrays;
 
-public class DataContainer implements Parcelable {
+public final class DataContainer implements Parcelable {
 
-    // Des collections pour manage les retours en arriere
-    private Collection<Short> rustScores;
-    private Collection<Short> haskellScores;
-    private Collection<Short> camlScores;
-    private Collection<Short> malbogeScores;
-    private Collection<Short> cppScores;
-    private Collection<Short> pythonScores;
-    private Collection<Short> rScores;
-    private Collection<Short> jsScores;
-    private Collection<Short> phpScores;
-    private Collection<Short> javaScores;
-    private Collection<Short> csScores;
+    /**
+     * length = 11;
+     *
+     * index 0 = rust
+     * index 1 = haskell
+     * index 2 = caml
+     * index 3 = malboge
+     * index 4 = cpp
+     * index 5 = python
+     * index 6 = r
+     * index 7 = js
+     * index 8 = php
+     * index 9 = java
+     * index 10 = cs
+     */
+    private final int[] scores; // length = 11
 
-    protected DataContainer(Parcel in) {
+    public DataContainer()
+    {
+        Log.d("DataContainer", "Creating new DataContainer");
+        this.scores = new int[11];
     }
 
-    public void addRustScore(final short score) // Simplifier en addScore(final Langage lang, final short score) ?
+    public DataContainer(Parcel in)
     {
-        this.rustScores.add(score);
-    }
+        Log.d("DataContainer", "Reading DataContainer from Parcel");
 
-    public short computeResults()
-    {
-        // Stream::reduce marche po
-        int reduce = 0;
-        for (Short rustScore : this.rustScores) {
-            reduce = reduce + rustScore;
+        this.scores = new int[11];
+        for (int i = 0; i < this.scores.length; i++)
+        {
+            this.scores[i] = in.readInt();
         }
 
-        return (short) reduce;
+        Log.d("DataContainer", "Retrieved data is " + Arrays.toString(this.scores));
+    }
+
+    /**
+     * length = 11;
+     *
+     * index 0 = rust
+     * index 1 = haskell
+     * index 2 = caml
+     * index 3 = malboge
+     * index 4 = cpp
+     * index 5 = python
+     * index 6 = r
+     * index 7 = js
+     * index 8 = php
+     * index 9 = java
+     * index 10 = cs
+     */
+    public void addScore(@NonNull final int[] score)
+    {
+        assert score.length == 11;
+
+        for (int i = 0; i < this.scores.length; i++) {
+            this.scores[i] = score[i];
+        }
+    }
+
+    public int[] getResults()
+    {
+        // Stream::reduce marche po
+        return Arrays.copyOf(this.scores, this.scores.length);
     }
 
 
     /** Parcelable impl **/
 
-    public static final Creator<DataContainer> CREATOR = new Creator<DataContainer>() {
+    public static final Creator<DataContainer> CREATOR = new Creator<DataContainer>()
+    {
         @Override
-        public DataContainer createFromParcel(Parcel in) {
+        public DataContainer createFromParcel(Parcel in)
+        {
             return new DataContainer(in);
         }
 
         @Override
-        public DataContainer[] newArray(int size) {
+        public DataContainer[] newArray(int size)
+        {
             return new DataContainer[size];
         }
     };
 
     @Override
-    public int describeContents() {
+    public int describeContents()
+    {
         return 0;
     }
 
     @Override
-    public void writeToParcel(Parcel parcel, int i) {
+    public void writeToParcel(Parcel parcel, int i)
+    {
+        Log.d("DataContainer", "Writing DataContainer to Parcel");
+
+        for (int score : this.scores) {
+            parcel.writeInt(score);
+        }
     }
 }

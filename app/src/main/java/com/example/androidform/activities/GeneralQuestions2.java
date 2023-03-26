@@ -26,9 +26,8 @@ public class GeneralQuestions2 extends Template {
     public GeneralQuestions2() {
         super(R.layout.activity_general_questions_2);
     }
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+    public void onCreateHook(Bundle savedInstanceState) {
         int[] optionsInterestsIds = {
                 R.id.optionInterests1,
                 R.id.optionInterests2,

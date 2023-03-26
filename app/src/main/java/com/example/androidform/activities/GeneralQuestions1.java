@@ -38,9 +38,8 @@ public class GeneralQuestions1 extends Template {
         this.startActivity(intent);
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+
+    public void onCreateHook(Bundle savedInstanceState) {
         hasProgrammingExp = findViewById(R.id.switchProgExp);
         programmingExpYears = findViewById(R.id.inputProgYears);
         programmingExpYearsLabel = findViewById(R.id.labelProgYears);

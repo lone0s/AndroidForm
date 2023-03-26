@@ -4,8 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.androidform.R;
-
 public abstract class Template extends AppCompatActivity {
     private final int layoutId;
 
@@ -14,11 +12,15 @@ public abstract class Template extends AppCompatActivity {
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layoutId);
-        findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
-        findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
+        this.setContentView(layoutId);
+
+        this.onCreateHook(savedInstanceState);
+
+        this.findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
+        this.findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
+
     }
 
     private void backButtonEventListener(View evt)
@@ -30,10 +32,18 @@ public abstract class Template extends AppCompatActivity {
         this.nextButtonAction(evt);
     }
 
+    public void onCreateHook(Bundle savedInstanceState)
+    {
+
+    }
+
     /**
      * Action to be performed when clicking the "Previous" button
      * */
-    protected abstract void backButtonAction(View evt);
+    protected void backButtonAction(View evt)
+    {
+        this.finish();
+    }
     /**
      * Action to be performed when clicking the "Next" button
      * */
