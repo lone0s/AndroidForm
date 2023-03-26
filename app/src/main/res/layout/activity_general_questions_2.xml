@@ -128,9 +128,11 @@
         android:textOff="@string/toggleLieDetectorFalse"
         android:textOn="@string/toggleLieDetectorTrue"
         app:layout_constraintBottom_toBottomOf="@+id/labelLie"
-        app:layout_constraintEnd_toEndOf="@+id/labelSocialyInaptValue"
+        app:layout_constraintEnd_toEndOf="@+id/seekBar4"
+        app:layout_constraintHorizontal_bias="0.734"
         app:layout_constraintStart_toEndOf="@+id/labelLie"
-        app:layout_constraintTop_toTopOf="@+id/labelLie" />
+        app:layout_constraintTop_toTopOf="@+id/labelLie"
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
         android:id="@+id/labelLie"

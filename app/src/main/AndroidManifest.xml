@@ -14,7 +14,7 @@
         android:theme="@style/Theme.AndroidForm"
         tools:targetApi="31">
         <activity
-            android:name=".GeneralQuestions2"
+            android:name=".activities.GeneralQuestions2"
             android:exported="false" />
         <activity
             android:name=".Template"
