@@ -23,4 +23,6 @@
     <string name="labelLie">Did you lie to any questions ?</string>
     <string name="toggleLieDetectorFalse">no</string>
     <string name="toggleLieDetectorTrue">yes</string>
+    <string name="labelProgExp">Do you have any experience with programming ?</string>
+    <string name="labelProgYears">For how many years?</string>
 </resources>
