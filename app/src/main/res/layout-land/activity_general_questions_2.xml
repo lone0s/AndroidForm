@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GeneralQuestions2">
+
+    <TextView
+        android:id="@+id/activityName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/activity_name"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        layout="@layout/activity_template"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/labelInterests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What attracts you ?"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="106dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="19dp"
+        tools:layout_editor_absoluteY="159dp">
+
+        <CheckBox
+            android:id="@+id/optionInterests1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Design" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Practicality" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intuitivity" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Efficacy" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelPersonality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="You're more of a ..."
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <Spinner
+        android:id="@+id/spinnerPersonality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/personality_types_values"
+        android:spinnerMode="dialog"
+        tools:layout_editor_absoluteX="221dp"
+        tools:layout_editor_absoluteY="271dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleLieDetector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:text="ToggleButton"
+        android:textOff="no"
+        android:textOn="yes"
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="546dp" />
+
+    <TextView
+        android:id="@+id/labelLie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Did you lie to any questions ?"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="559dp" />
+
+    <TextView
+        android:id="@+id/labelSociallyInapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="How socially inapt are you ?"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="392dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="123dp"
+        android:layout_height="18dp"
+        android:max="100"
+        android:min="0"
+        android:progress="0"
+        tools:layout_editor_absoluteX="230dp"
+        tools:layout_editor_absoluteY="393dp" />
+
+    <TextView
+        android:id="@+id/labelSocialyInaptValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        tools:layout_editor_absoluteX="353dp"
+        tools:layout_editor_absoluteY="393dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

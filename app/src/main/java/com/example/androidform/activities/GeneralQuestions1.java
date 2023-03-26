@@ -34,6 +34,8 @@ public class GeneralQuestions1 extends Template {
     @Override
     protected void nextButtonAction(View evt) {
         Log.d(GeneralQuestions1.LOGGER_TAG, "Next button clicked");
+        Intent intent = new Intent(this, GeneralQuestions2.class);
+        this.startActivity(intent);
     }
 
     @Override
