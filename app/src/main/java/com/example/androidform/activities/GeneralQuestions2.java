@@ -29,23 +29,27 @@ public class GeneralQuestions2 extends Template {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_general_questions_2);
+        int[] optionsInterestsIds = {
+                R.id.optionInterests1,
+                R.id.optionInterests2,
+                R.id.optionInterests3,
+                R.id.optionInterests4};
 
-        int[] optionsInterestsIds = {R.id.optionInterests1, R.id.optionInterests2, R.id.optionInterests3, R.id.optionInterests4};
         for (int i = 0; i < optionsInterestsIds.length; ++i) {
             optionsInterests[i] = findViewById(optionsInterestsIds[i]);
         }
-        spinnerPersonality = findViewById(R.id.spinnerPersonality);
-        socialyInaptBar = findViewById(R.id.seekBar4);
-        labelSocialyInaptValue = findViewById(R.id.labelSocialyInaptValue);
-        toggleLieDetector = findViewById(R.id.toggleLieDetector);
+
+        this.spinnerPersonality = findViewById(R.id.spinnerPersonality);
+        this.socialyInaptBar = findViewById(R.id.seekBar4);
+        this.labelSocialyInaptValue = findViewById(R.id.labelSocialyInaptValue);
+        this.toggleLieDetector = findViewById(R.id.toggleLieDetector);
 
         String initialSocialyInaptValue = String.valueOf(socialyInaptBar.getProgress()) + "%";
-        labelSocialyInaptValue.setText(initialSocialyInaptValue);
-        lieDetectorEnabled = toggleLieDetector.isEnabled();
+        this.labelSocialyInaptValue.setText(initialSocialyInaptValue);
+        this.lieDetectorEnabled = this.toggleLieDetector.isEnabled();
 
 
-        socialyInaptBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+        this.socialyInaptBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 String socialyInaptValue = String.valueOf(progress) + "%";
@@ -63,7 +67,7 @@ public class GeneralQuestions2 extends Template {
             }
         });
 
-        toggleLieDetector.setOnClickListener(new View.OnClickListener() {
+        this.toggleLieDetector.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 lieDetectorEnabled = !lieDetectorEnabled;
@@ -72,7 +76,6 @@ public class GeneralQuestions2 extends Template {
         });
     }
 
-    //TODO : Fix weird bug, backbutton not working
     @Override
     protected void backButtonAction(View evt) {
         Log.d(GeneralQuestions2.LOGGER_TAG, "Previous button clicked");
