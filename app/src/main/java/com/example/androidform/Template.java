@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.androidform.R;
+
 public abstract class Template extends AppCompatActivity {
     private final int layoutId;
 
@@ -12,13 +14,11 @@ public abstract class Template extends AppCompatActivity {
     }
 
     @Override
-    protected final void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(layoutId);
-
         findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
         findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
-
     }
 
     private void backButtonEventListener(View evt)

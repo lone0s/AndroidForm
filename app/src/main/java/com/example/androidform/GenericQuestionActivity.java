@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioGroup;
 
+import com.example.androidform.R;
 import com.example.androidform.questions.lib.Question;
 
 public abstract class GenericQuestionActivity<QuestionType extends Question<Answers>, Answers> extends AppCompatActivity {
