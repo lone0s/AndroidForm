@@ -51,6 +51,4 @@ public class GeneralQuestions1 extends Template {
         });
     }
 
-    //TODO: Verify age > 0 && < 120 ; Parse && save
-    //TODO: Fix layout constraints
-}
+    //TODO: Verify age > 0 && < 120 ; Parse && save}
