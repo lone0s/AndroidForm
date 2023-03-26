@@ -32,6 +32,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".questions.activities.generics.PrototypeRadioQuestion" />
+        <activity android:name=".questions.activities.generics.SecondRadioQuestion" />
     </application>
 
 </manifest>
