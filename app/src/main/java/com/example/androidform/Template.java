@@ -14,10 +14,12 @@ public abstract class Template extends AppCompatActivity {
     @Override
     protected final void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layoutId);
+        this.setContentView(layoutId);
 
-        findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
-        findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
+        this.onCreateHook(savedInstanceState);
+
+        this.findViewById(R.id.beforeButton).setOnClickListener(this::backButtonEventListener);
+        this.findViewById(R.id.nextButton).setOnClickListener(this::nextButtonEventListener);
 
     }
 
@@ -30,10 +32,18 @@ public abstract class Template extends AppCompatActivity {
         this.nextButtonAction(evt);
     }
 
+    public void onCreateHook(Bundle savedInstanceState)
+    {
+
+    }
+
     /**
      * Action to be performed when clicking the "Previous" button
      * */
-    protected abstract void backButtonAction(View evt);
+    protected void backButtonAction(View evt)
+    {
+        this.finish();
+    }
     /**
      * Action to be performed when clicking the "Next" button
      * */

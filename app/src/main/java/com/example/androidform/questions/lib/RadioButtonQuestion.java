@@ -57,10 +57,8 @@ public class RadioButtonQuestion extends Question<Short> {
         return new RadioButtonQuestion(radioGroup, buttons);
     }
 
-    @NonNull
     @Override
     public Short getAnswer() {
-        if (!((RadioButton) this.target).isChecked()) return -1;
 
         Short i = 0;
         for (RadioButton answer : this.answers) {
@@ -69,6 +67,6 @@ public class RadioButtonQuestion extends Question<Short> {
             i++;
         }
 
-        throw new Error("Dead code reached");
+        return null;
     }
 }
