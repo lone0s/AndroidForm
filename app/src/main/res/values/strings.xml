@@ -6,4 +6,9 @@
     <string name="logo_name">whoami</string>
     <string name="nameInput">who are you?</string>
     <string name="nameLabel">Name</string>
+    <string name="YesOrNo_Q">Yes, or No?</string>
+    <string name="YesOrNo_A_Yes">Yes</string>
+    <string name="YesOrNo_A_No">No</string>
+    <string name="YesOrNo_A_Rust">Rust.</string>
+    <string name="">Rust.</string>
 </resources>
