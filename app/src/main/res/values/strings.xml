@@ -10,5 +10,10 @@
     <string name="YesOrNo_A_Yes">Yes</string>
     <string name="YesOrNo_A_No">No</string>
     <string name="YesOrNo_A_Rust">Rust.</string>
-    <string name="">Rust.</string>
+    <string name="Boat_Q">Au cours de ses voyages le bois d\'un bateau pourris, arrivé à destination, tous morceaux sont différents de ceux du bateau d\'origine.</string>
+    <string name="Boat_A_SameBoat">It\'s the same boat</string>
+    <string name="Boat_A_NotSameBoat">It\'s not the same boat</string>
+    <string name="Boat_A_Pointer">PointerAnswer</string>
+    <string name="Boat_A_Boat">It\'s a boat, we don\'t care if it\'s the same</string>
+    <string name="Boat_A_Rust">Rust makes faster boats</string>
 </resources>

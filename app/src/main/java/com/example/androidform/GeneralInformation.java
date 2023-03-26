@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
-import com.example.androidform.questions.activities.generics.PrototypeRadioQuestion;
+import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 
 public class GeneralInformation extends Template {
 
@@ -26,7 +26,7 @@ public class GeneralInformation extends Template {
     @Override
     protected void nextButtonAction(View evt) {
         Log.d(GeneralInformation.LOGGER_TAG, "Next button clicked");
-        Intent intent = new Intent(this, PrototypeRadioQuestion.class);
+        Intent intent = new Intent(this, BSQ_YesOrNo.class);
 
         this.startActivity(intent);
     }
