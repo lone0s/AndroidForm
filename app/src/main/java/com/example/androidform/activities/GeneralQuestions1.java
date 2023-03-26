@@ -50,5 +50,6 @@ public class GeneralQuestions1 extends Template {
             programmingExpYearsLabel.setVisibility(isChecked ? View.VISIBLE : View.GONE);
         });
     }
+}
 
     //TODO: Verify age > 0 && < 120 ; Parse && save}
