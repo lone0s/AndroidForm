@@ -86,4 +86,16 @@ public class GeneralQuestions2 extends Template {
     protected void nextButtonAction(View evt) {
         Log.d(GeneralQuestions2.LOGGER_TAG, "Next button clicked");
     }
+
+    public void verifyData() {
+
+    }
+
+    public void saveData() {
+
+    }
+
+    public void loadData() {
+
+    }
 }

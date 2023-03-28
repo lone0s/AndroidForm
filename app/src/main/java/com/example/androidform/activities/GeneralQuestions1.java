@@ -38,7 +38,6 @@ public class GeneralQuestions1 extends Template {
         this.startActivity(intent);
     }
 
-
     public void onCreateHook(Bundle savedInstanceState) {
         hasProgrammingExp = findViewById(R.id.switchProgExp);
         programmingExpYears = findViewById(R.id.inputProgYears);
@@ -49,6 +48,18 @@ public class GeneralQuestions1 extends Template {
             programmingExpYears.setVisibility(isChecked ? View.VISIBLE : View.GONE);
             programmingExpYearsLabel.setVisibility(isChecked ? View.VISIBLE : View.GONE);
         });
+    }
+
+    public void verifyData() {
+
+    }
+
+    public void saveData() {
+
+    }
+
+    public void loadData() {
+
     }
 }
 

@@ -3,19 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/activity_generic_question.xml" value="0.18541666666666667" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_general_questions_1.xml" value="0.1" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_general_questions_2.xml" value="0.2998236331569665" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_main.xml" value="0.20105820105820105" />
-        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/activity_generic_question.xml" value="0.18541666666666667" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_information.xml" value="0.22291666666666668" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions2.xml" value="0.1403985507246377" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions_1.xml" value="0.33" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions_2.xml" value="0.3146067415730337" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_generic_question.xml" value="0.17395833333333333" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_template.xml" value="0.25" />
+        <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_information.xml" value="0.1" />
+        <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_main.xml" value="0.16" />
+        <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_template.xml" value="0.1" />
       </map>
     </option>
   </component>
