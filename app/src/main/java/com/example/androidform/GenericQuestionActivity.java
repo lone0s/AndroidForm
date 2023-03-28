@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RadioGroup;
 
+import androidx.constraintlayout.widget.Group;
+
 import com.example.androidform.questions.lib.Question;
 
 public abstract class GenericQuestionActivity<QuestionType extends Question<Answers>, Answers> extends Template {
@@ -23,9 +25,8 @@ public abstract class GenericQuestionActivity<QuestionType extends Question<Answ
     {
         this.buildQuestion();
 
-        this.addContentView(
-            this.question.getComponent(),
-            new RadioGroup.LayoutParams(new ViewGroup.MarginLayoutParams(-2, -2))
+        ((ViewGroup) this.findViewById(R.id.genericActivity_QuestionContainer)).addView(
+            this.question.getComponent()
         );
     }
 }

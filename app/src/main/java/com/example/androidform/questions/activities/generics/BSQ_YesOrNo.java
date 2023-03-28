@@ -8,24 +8,27 @@ import com.example.androidform.DataContainer;
 import com.example.androidform.GenericQuestionActivity;
 import com.example.androidform.R;
 import com.example.androidform.core.Language;
+import com.example.androidform.questions.activities.generics.templates.RadioButtonQuestionActivity;
 import com.example.androidform.questions.lib.RadioButtonQuestion;
 
-public class BSQ_YesOrNo extends GenericQuestionActivity<RadioButtonQuestion, Integer>
+public class BSQ_YesOrNo extends RadioButtonQuestionActivity
 {
 
     private static final String LOGGER_TAG = "[Yes, or No?]";
 
     @Override
-    protected void buildQuestion() {
-        this.question = RadioButtonQuestion.build(
-                this,
-                getResources().getString(R.string.YesOrNo_Q),
-                new String[]{
-                        getResources().getString(R.string.YesOrNo_A_Yes),
-                        getResources().getString(R.string.YesOrNo_A_No),
-                        getResources().getString(R.string.YesOrNo_A_Rust)
-                }
-        );
+    protected int[] possibleAnswersResourceIds() {
+        return new int[]
+                {
+                        R.string.YesOrNo_A_Yes,
+                        R.string.YesOrNo_A_No,
+                        R.string.YesOrNo_A_Rust
+                };
+    }
+
+    @Override
+    protected int questionTextResourceId() {
+        return R.string.YesOrNo_Q;
     }
 
     @Override
