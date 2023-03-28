@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
-public class RadioButtonQuestion extends Question<Short> {
+public class RadioButtonQuestion extends Question<Integer> {
 
     private final List<RadioButton> answers;
 
@@ -30,7 +30,7 @@ public class RadioButtonQuestion extends Question<Short> {
     public static RadioButtonQuestion build(
             Context context,
             @NonNull String question,
-            @NonNull HashMap<String, Pair<Language, Short>> answers
+            @NonNull String[] answers
     )
     {
         RadioGroup radioGroup = new RadioGroup(context);
@@ -42,25 +42,22 @@ public class RadioButtonQuestion extends Question<Short> {
 
         List<RadioButton> buttons = new ArrayList<>();
 
-        answers.forEach(
-            (lbl, couple) ->
-            {
-                RadioButton button = new RadioButton(context);
-                button.setText(lbl);
-                radioGroup.addView(button);
+        for (String lbl : answers) {
+            RadioButton button = new RadioButton(context);
+            button.setText(lbl);
+            radioGroup.addView(button);
 
-                buttons.add(button);
-            }
-        );
+            buttons.add(button);
+        }
 
 
         return new RadioButtonQuestion(radioGroup, buttons);
     }
 
     @Override
-    public Short getAnswer() {
+    public Integer getAnswer() {
 
-        Short i = 0;
+        int i = 0;
         for (RadioButton answer : this.answers) {
             if (answer.isChecked()) return i;
 

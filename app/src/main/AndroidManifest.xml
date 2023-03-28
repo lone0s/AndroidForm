@@ -34,8 +34,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".questions.activities.generics.PrototypeRadioQuestion" />
-        <activity android:name=".questions.activities.generics.SecondRadioQuestion" />
+        <activity android:name=".questions.activities.generics.BSQ_YesOrNo" />
+        <activity android:name=".questions.activities.generics.BSQ_Boat" />
     </application>
 
 </manifest>
