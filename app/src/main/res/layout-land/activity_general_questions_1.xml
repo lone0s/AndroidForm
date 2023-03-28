@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GeneralQuestions1">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_template"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <TextView
+        android:id="@+id/activityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/activity_name"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ageInput"
+        android:layout_width="165dp"
+        android:layout_height="48dp"
+        android:ems="10"
+        android:inputType="number"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toStartOf="@+id/statusLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityName"
+        app:layout_constraintVertical_bias="0.19999999" />
+
+    <TextView
+        android:id="@+id/ageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ageLabel"
+        app:layout_constraintBottom_toBottomOf="@+id/ageInput"
+        app:layout_constraintEnd_toStartOf="@+id/ageInput"
+        app:layout_constraintHorizontal_bias="0.343"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ageInput" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="38dp"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/include"
+        app:layout_constraintVertical_bias="0.25">
+
+        <RadioButton
+            android:id="@+id/status_rb_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_choice_1" />
+
+        <RadioButton
+            android:id="@+id/status_rb_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_choice_2"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="284dp" />
+
+        <RadioButton
+            android:id="@+id/status_rb_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_choice_3"
+            tools:layout_editor_absoluteX="192dp"
+            tools:layout_editor_absoluteY="332dp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/statusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="@string/status_label"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintTop_toTopOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.496" />
+
+    <EditText
+        android:id="@+id/inputProgYears"
+        android:layout_width="73dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="48dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/labelProgYears"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/labelProgYears" />
+
+    <Switch
+        android:id="@+id/switchProgExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/labelProgExp"
+        app:layout_constraintEnd_toStartOf="@+id/statusLabel"
+        app:layout_constraintTop_toTopOf="@+id/labelProgExp" />
+
+    <TextView
+        android:id="@+id/labelProgExp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelProgExp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switchProgExp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageInput"
+        app:layout_constraintVertical_bias="0.38" />
+
+    <TextView
+        android:id="@+id/labelProgYears"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="@string/labelProgYears"
+        app:layout_constraintBottom_toBottomOf="@+id/switchProgExp"
+        app:layout_constraintEnd_toStartOf="@+id/inputProgYears"
+        app:layout_constraintHorizontal_bias="0.157"
+        app:layout_constraintStart_toEndOf="@+id/switchProgExp"
+        app:layout_constraintTop_toTopOf="@+id/switchProgExp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

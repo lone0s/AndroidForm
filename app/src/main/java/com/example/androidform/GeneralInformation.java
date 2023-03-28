@@ -5,13 +5,14 @@ import android.util.Log;
 import android.view.View;
 
 import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
+import com.example.androidform.activities.MainActivity;
 
 public class GeneralInformation extends Template {
 
     private static final String LOGGER_TAG = "General_Information";
 
     public GeneralInformation() {
-        super(R.layout.activity_general_information);
+        super(R.layout.activity_general_questions_1);
     }
 
     @Override

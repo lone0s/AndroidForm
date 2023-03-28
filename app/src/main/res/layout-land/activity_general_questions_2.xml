@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GeneralQuestions2">
+
+    <TextView
+        android:id="@+id/activityName2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/activity_name"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include3"
+        layout="@layout/activity_template"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerPersonality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:entries="@array/personality_types_values"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        app:layout_constraintBottom_toBottomOf="@+id/radioGroup3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/labelPersonality"
+        app:layout_constraintVertical_bias="0.93" />
+
+    <TextView
+        android:id="@+id/labelInterests"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelInterests"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup3"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup3"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityName2"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityName2">
+
+        <CheckBox
+            android:id="@+id/optionInterests1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optionInterests1" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optionInterests2" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/optionInterests3" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="1" />
+
+        <CheckBox
+            android:id="@+id/optionInterests4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/optionInterests4" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/labelPersonality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelPersonality"
+        app:layout_constraintBottom_toBottomOf="@+id/labelInterests"
+        app:layout_constraintEnd_toEndOf="@+id/spinnerPersonality"
+        app:layout_constraintStart_toStartOf="@+id/spinnerPersonality"
+        app:layout_constraintTop_toTopOf="@+id/activityName2"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/labelLie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelLie"
+        app:layout_constraintBottom_toBottomOf="@+id/labelSociallyInapt"
+        app:layout_constraintEnd_toStartOf="@+id/toggleLieDetector"
+        app:layout_constraintStart_toStartOf="@+id/labelSocialyInaptValue"
+        app:layout_constraintTop_toTopOf="@+id/labelSociallyInapt" />
+
+    <ToggleButton
+        android:id="@+id/toggleLieDetector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:checked="false"
+        android:text="@string/toggleLieDetector"
+        android:textColor="#455A64"
+        android:textOff="@string/toggleLieDetectorFalse"
+        android:textOn="@string/toggleLieDetectorTrue"
+        app:layout_constraintBottom_toBottomOf="@+id/labelLie"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/labelLie" />
+
+    <SeekBar
+        android:id="@+id/seekBar4"
+        android:layout_width="123dp"
+        android:layout_height="18dp"
+        android:max="100"
+        android:min="0"
+        android:progress="0"
+        app:layout_constraintBottom_toBottomOf="@+id/labelSociallyInapt"
+        app:layout_constraintEnd_toEndOf="@+id/radioGroup3"
+        app:layout_constraintStart_toEndOf="@+id/labelSociallyInapt"
+        app:layout_constraintTop_toTopOf="@+id/labelSociallyInapt" />
+
+    <TextView
+        android:id="@+id/labelSociallyInapt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/labelSociallyInapt"
+        app:layout_constraintBottom_toTopOf="@+id/include3"
+        app:layout_constraintStart_toStartOf="@+id/radioGroup3"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup3" />
+
+    <TextView
+        android:id="@+id/labelSocialyInaptValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBar4"
+        app:layout_constraintStart_toEndOf="@+id/seekBar4"
+        app:layout_constraintTop_toTopOf="@+id/seekBar4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

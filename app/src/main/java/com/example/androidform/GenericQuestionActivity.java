@@ -1,12 +1,7 @@
 package com.example.androidform;
 
 import android.os.Bundle;
-import android.text.Layout;
-import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
-
-import androidx.constraintlayout.widget.Group;
 
 import com.example.androidform.questions.lib.Question;
 
