@@ -2,6 +2,8 @@ package com.example.androidform.questions.activities.generics.templates;
 
 import android.content.res.Resources;
 
+import androidx.annotation.NonNull;
+
 import com.example.androidform.GenericQuestionActivity;
 import com.example.androidform.questions.lib.RadioButtonQuestion;
 
@@ -22,6 +24,17 @@ public abstract class RadioButtonQuestionActivity extends GenericQuestionActivit
                 resources.getString(this.questionTextResourceId()),
                 answers
         );
+    }
+
+    @Override
+    protected boolean canClickNextButton() {
+        return this.question.getAnswer() != null;
+    }
+
+    @NonNull
+    @Override
+    protected CharSequence onInvalidFormToastText() {
+        return "Please select an option";
     }
 
     protected abstract int[] possibleAnswersResourceIds();

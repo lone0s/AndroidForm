@@ -11,66 +11,49 @@ import java.util.Arrays;
 public final class DataContainer implements Parcelable {
 
     /**
-     * length = 11;
-     *
-     * index 0 = rust
-     * index 1 = haskell
-     * index 2 = caml
-     * index 3 = malboge
-     * index 4 = cpp
-     * index 5 = python
-     * index 6 = r
-     * index 7 = js
-     * index 8 = php
-     * index 9 = java
-     * index 10 = cs
+     * Use Language.XXX.toInt() to get a language's index
      */
-    private final int[] scores; // length = 11
+    private final int[][] scores; // length = 11
+    private final int currentQuestion;
 
     public DataContainer()
     {
         Log.d("DataContainer", "Creating new DataContainer");
-        this.scores = new int[11];
+        this.currentQuestion = -1;
+        this.scores = new int[11][0];
     }
 
     public DataContainer(Parcel in)
     {
         Log.d("DataContainer", "Reading DataContainer from Parcel");
 
-        this.scores = new int[11];
+        this.currentQuestion = in.readInt();
+
+        this.scores = new int[11][this.currentQuestion];
+        //Log.d("DataContainer", String.valueOf(in.readInt()) + " " + this.currentQuestion);
         for (int i = 0; i < this.scores.length; i++)
         {
-            this.scores[i] = in.readInt();
+            in.readIntArray(this.scores[i]);
+            this.scores[i] = Arrays.copyOf(this.scores[i], this.currentQuestion +1);
         }
 
-        Log.d("DataContainer", "Retrieved data is " + Arrays.toString(this.scores));
+        Log.d("DataContainer", "Retrieved data is #" + this.currentQuestion + " : " + Arrays.deepToString(this.scores));
     }
 
-    /**
-     * length = 11;
-     *
-     * index 0 = rust
-     * index 1 = haskell
-     * index 2 = caml
-     * index 3 = malboge
-     * index 4 = cpp
-     * index 5 = python
-     * index 6 = r
-     * index 7 = js
-     * index 8 = php
-     * index 9 = java
-     * index 10 = cs
+    /** Use Language.XXX.toInt() to get a language's index
      */
     public void addScore(@NonNull final int[] score)
     {
         assert score.length == 11;
+        assert this.currentQuestion == this.scores[0].length -1;
 
         for (int i = 0; i < this.scores.length; i++) {
-            this.scores[i] = score[i];
+            Log.d("DataContainer", i + " | " + this.currentQuestion);
+            this.scores[i][this.currentQuestion] = score[i];
         }
     }
 
-    public int[] getResults()
+    public int[][] getResults()
     {
         // Stream::reduce marche po
         return Arrays.copyOf(this.scores, this.scores.length);
@@ -105,8 +88,9 @@ public final class DataContainer implements Parcelable {
     {
         Log.d("DataContainer", "Writing DataContainer to Parcel");
 
-        for (int score : this.scores) {
-            parcel.writeInt(score);
+        parcel.writeInt(this.currentQuestion +1);
+        for (int[] score : this.scores) {
+            parcel.writeIntArray(score);
         }
     }
 }

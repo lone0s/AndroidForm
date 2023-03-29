@@ -10,8 +10,12 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import androidx.annotation.NonNull;
+
+import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 import com.example.androidform.Template;
+import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 
 public class GeneralQuestions2 extends Template {
 
@@ -25,6 +29,17 @@ public class GeneralQuestions2 extends Template {
 
     public GeneralQuestions2() {
         super(R.layout.activity_general_questions_2);
+    }
+
+    @Override
+    protected boolean canClickNextButton() {
+        return true; // TODO : check validite du formulaire
+    }
+
+    @NonNull
+    @Override
+    protected CharSequence onInvalidFormToastText() {
+        return "TODO : Insert resource here"; // TODO : inserer resource
     }
 
     public void onCreateHook(Bundle savedInstanceState) {
@@ -76,26 +91,13 @@ public class GeneralQuestions2 extends Template {
     }
 
     @Override
-    protected void backButtonAction(View evt) {
-        Log.d(GeneralQuestions2.LOGGER_TAG, "Previous button clicked");
-        Intent intent = new Intent(this, GeneralQuestions1.class);
-        this.startActivity(intent);
-    }
-
-    @Override
     protected void nextButtonAction(View evt) {
-        Log.d(GeneralQuestions2.LOGGER_TAG, "Next button clicked");
-    }
+        int[] answerScores = new int[11];
 
-    public void verifyData() {
+        // TODO : Process answers
 
-    }
+        this.data.addScore(answerScores); // Set scores to add
 
-    public void saveData() {
-
-    }
-
-    public void loadData() {
-
+        this.nextActivity(this, BSQ_YesOrNo.class);
     }
 }

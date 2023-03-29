@@ -1,9 +1,14 @@
 package com.example.androidform;
 
 import android.content.Intent;
+import android.provider.ContactsContract;
 import android.util.Log;
 import android.view.View;
 
+import androidx.annotation.NonNull;
+
+import com.example.androidform.activities.GeneralQuestions1;
+import com.example.androidform.core.Language;
 import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 import com.example.androidform.activities.MainActivity;
 
@@ -16,19 +21,24 @@ public class GeneralInformation extends Template {
     }
 
     @Override
-    protected void backButtonAction(View evt) {
-        Log.d(GeneralInformation.LOGGER_TAG, "Previous button clicked");
-        Log.e(GeneralInformation.LOGGER_TAG, "NEW VIEW CREATED, NOT OPTIMAL");
-        Intent intent = new Intent(this, MainActivity.class);
+    protected boolean canClickNextButton() {
+        return true;
+    }
 
-        this.startActivity(intent);
+    @NonNull
+    @Override
+    protected CharSequence onInvalidFormToastText() {
+        return "Test";
     }
 
     @Override
     protected void nextButtonAction(View evt) {
-        Log.d(GeneralInformation.LOGGER_TAG, "Next button clicked");
-        Intent intent = new Intent(this, BSQ_YesOrNo.class);
+        int[] answerScores = new int[11];
 
-        this.startActivity(intent);
+        // TODO : Process answers
+
+        this.data.addScore(answerScores); // Set scores to add
+
+        this.nextActivity(this, GeneralQuestions1.class);
     }
 }

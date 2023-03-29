@@ -34,25 +34,16 @@ public class BSQ_YesOrNo extends RadioButtonQuestionActivity
     @Override
     protected void nextButtonAction(View evt) {
         Integer answer = this.question.getAnswer();
-        if (answer == null) return;
 
-        Log.d(BSQ_YesOrNo.LOGGER_TAG, "Creating and updating DataContainer");
-        DataContainer dc = new DataContainer();
+        Log.d(BSQ_YesOrNo.LOGGER_TAG, "Updating DataContainer");
 
         int[] answerScores = new int[11];
         if (answer == 0) answerScores[Language.Rust.toInt()] = 0; // rustScore
         if (answer == 1) answerScores[Language.Rust.toInt()] = 1; // rustScore
         if (answer == 2) answerScores[Language.Rust.toInt()] = 2; // rustScore
 
-        dc.addScore(answerScores);
+        this.data.addScore(answerScores);
 
-
-        Intent next = new Intent(this, BSQ_Boat.class);
-
-        Log.d(BSQ_YesOrNo.LOGGER_TAG, "Sending DataContainer to Intent");
-        next.putExtra("scores", dc);
-
-        Log.d(BSQ_YesOrNo.LOGGER_TAG, "Launching activity SecondRadioQuestion");
-        this.startActivity(next);
+        this.nextActivity(this, BSQ_Boat.class);
     }
 }

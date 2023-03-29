@@ -7,13 +7,12 @@ import android.view.View;
 import com.example.androidform.DataContainer;
 import com.example.androidform.GenericQuestionActivity;
 import com.example.androidform.R;
+import com.example.androidform.activities.GeneralQuestions1;
 import com.example.androidform.questions.activities.generics.templates.RadioButtonQuestionActivity;
 import com.example.androidform.questions.lib.RadioButtonQuestion;
 
 public class BSQ_Boat extends RadioButtonQuestionActivity
 {
-
-    private static final String LOGGER_TAG = "Boat question";
 
     @Override
     protected int[] possibleAnswersResourceIds() {
@@ -33,8 +32,12 @@ public class BSQ_Boat extends RadioButtonQuestionActivity
 
     @Override
     protected void nextButtonAction(View evt) {
-        Log.d(BSQ_Boat.LOGGER_TAG, "Retrieving Intent and DataContainer scores");
-        DataContainer dc = this.getIntent().getParcelableExtra("scores");
-        assert dc != null;
+        int[] answerScores = new int[11];
+
+        // TODO : Process answers
+
+        this.data.addScore(answerScores); // Set scores to add
+
+        //this.nextActivity(this, GeneralQuestions1.class); // TODO : Decommenter
     }
 }

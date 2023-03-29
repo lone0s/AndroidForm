@@ -1,13 +1,8 @@
 package com.example.androidform.questions.lib;
 
-import android.util.Pair;
 import android.view.View;
 
 import androidx.annotation.NonNull;
-
-import com.example.androidform.core.Language;
-
-import java.util.Collection;
 
 public abstract class Question<AnswerType>
 {
