@@ -110,8 +110,8 @@ public final class MCQ_Liking_Dislike extends Template
         // MCQ_Liking
         if(((CheckBox) this.findViewById(R.id.MCQ_Liking_A_history)).isChecked())
         {
-            answerScores[Language.Caml.toInt()] = 1;
-            answerScores[Language.Haskell.toInt()] = 1;
+            answerScores[Language.Caml.toInt()] += 1;
+            answerScores[Language.Haskell.toInt()] += 1;
         }
         if(((CheckBox) this.findViewById(R.id.MCQ_Liking_A_sand)).isChecked())
         {

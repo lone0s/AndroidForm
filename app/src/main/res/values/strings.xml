@@ -39,6 +39,9 @@
     <string name="Boat_A_Rust">Rust makes faster boats</string>
     <string name="Boat_A_wut">That\'s a stupid question.</string>
 
+    <string name="UCQ_YoN_Boat">Please, select an option</string>
+    <string name="UCQ_YoN_Boat_bothEmpty">Please, select an option in each question</string>
+
     <string name="Liking_Q">What do you like among these choices</string>
     <string name="Liking_A_snake">Snakes</string>
     <string name="Liking_A_sand">To have sand in my eyes</string>
