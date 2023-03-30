@@ -18,7 +18,7 @@
     <string name="optionInterests4">Efficacy</string>
     <string name="toggleLieDetector">ToggleButton</string>
     <string name="labelInterests">What attracts you ?</string>
-    <string name="labelPersonality">You\'re more of a ...</string>
+    <string name="labelPersonality">You\'re more of a …</string>
     <string name="labelSociallyInapt">How socially inapt are you ?</string>
     <string name="labelLie">Did you lie to any questions ?</string>
     <string name="toggleLieDetectorFalse">no</string>
@@ -31,10 +31,34 @@
     <string name="YesOrNo_A_No">No</string>
     <string name="YesOrNo_A_Rust">Rust.</string>
 
-    <string name="Boat_Q">Au cours de ses voyages le bois d\'un bateau pourris, arrivé à destination, tous morceaux sont différents de ceux du bateau d\'origine.</string>
+    <string name="Boat_Q">As it travels, a boat\'s wood rots, once arrived, each piece of wood are different.</string>
     <string name="Boat_A_SameBoat">It\'s the same boat</string>
     <string name="Boat_A_NotSameBoat">It\'s not the same boat</string>
-    <string name="Boat_A_Pointer">PointerAnswer</string>
+    <string name="Boat_A_Pointer">I\'ve been looking at it allllll the way; it\'s the same!</string>
     <string name="Boat_A_Boat">It\'s a boat, we don\'t care if it\'s the same</string>
     <string name="Boat_A_Rust">Rust makes faster boats</string>
+    <string name="Boat_A_wut">That\'s a stupid question.</string>
+
+    <string name="Liking_Q">What do you like among these choices</string>
+    <string name="Liking_A_snake">Snakes</string>
+    <string name="Liking_A_sand">To have sand in my eyes</string>
+    <string name="Liking_A_suffer">To suffer</string>
+    <string name="Liking_A_history">History</string>
+    <string name="Liking_error_toast">Why are you here, if you don\'t even like suffering?</string>
+
+    <string name="Dislike_Q">What, among these choices, do you abhor?</string>
+    <string name="Dislike_A_life">My life…</string>
+    <string name="Dislike_A_beauty">Beautiful things</string>
+    <string name="Dislike_A_ugly">Ugly things</string>
+    <string name="Dislike_A_rust">Not coding in Rust.</string>
+    <string name="Dislike_A_none">Why, everything is nice!</string>
+    <string name="Dislike_error_toast">Seriously, answer.</string>
+
+    <string name="mcq_liking_activity_error_toast">Please answer the questions</string>
+
+    <string name="intuitive_Q">Is this interface intuitive?</string>
+
+    <string name="server_Q">Does the server deserve a tip?</string>
+    <string name="server_A_Yes">Hell yes!</string>
+    <string name="server_A_No">What server?</string>
 </resources>
