@@ -18,7 +18,7 @@
     <string name="optionInterests4">Efficacy</string>
     <string name="toggleLieDetector">ToggleButton</string>
     <string name="labelInterests">What attracts you ?</string>
-    <string name="labelPersonality">You\'re more of a ...</string>
+    <string name="labelPersonality">You\'re more of a …</string>
     <string name="labelSociallyInapt">How socially inapt are you ?</string>
     <string name="labelLie">Did you lie to any questions ?</string>
     <string name="toggleLieDetectorFalse">no</string>
@@ -37,7 +37,8 @@
     <string name="Boat_A_Pointer">PointerAnswer</string>
     <string name="Boat_A_Boat">It\'s a boat, we don\'t care if it\'s the same</string>
     <string name="Boat_A_Rust">Rust makes faster boats</string>
-    
+    <string name="Boat_A_wut">That\'s a stupid question.</string>
+
     <string name="Liking_Q">What do you like among these choices</string>
     <string name="Liking_A_snake">Snakes</string>
     <string name="Liking_A_sand">To have sand in my eyes</string>

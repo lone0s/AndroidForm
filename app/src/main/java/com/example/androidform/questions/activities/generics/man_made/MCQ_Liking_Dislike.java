@@ -177,6 +177,6 @@ public final class MCQ_Liking_Dislike extends Template
         // Persisting data
         this.data.addScore(answerScores); // Set scores to add
 
-        this.startActivity(this, BSQ_YesOrNo.class);
+        this.startActivity(this, UCQ_YoN_Boat.class);
     }
 }
