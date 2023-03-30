@@ -43,6 +43,21 @@
     <string name="Liking_A_sand">To have sand in my eyes</string>
     <string name="Liking_A_suffer">To suffer</string>
     <string name="Liking_A_history">History</string>
+    <string name="Liking_error_toast">Why are you here, if you don\'t even like suffering?</string>
 
+    <string name="Dislike_Q">What, among these choices, do you abhor?</string>
+    <string name="Dislike_A_life">My life…</string>
+    <string name="Dislike_A_beauty">Beautiful things</string>
+    <string name="Dislike_A_ugly">Ugly things</string>
+    <string name="Dislike_A_rust">Not coding in Rust.</string>
+    <string name="Dislike_A_none">Why, everything is nice!</string>
+    <string name="Dislike_error_toast">Seriously, answer.</string>
 
+    <string name="mcq_liking_activity_error_toast">Please answer the questions</string>
+
+    <string name="intuitive_Q">Is this interface intuitive?</string>
+
+    <string name="server_Q">Does the server deserve a tip?</string>
+    <string name="server_A_Yes">Hell yes!</string>
+    <string name="server_A_No">What server?</string>
 </resources>
