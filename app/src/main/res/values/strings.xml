@@ -37,4 +37,12 @@
     <string name="Boat_A_Pointer">PointerAnswer</string>
     <string name="Boat_A_Boat">It\'s a boat, we don\'t care if it\'s the same</string>
     <string name="Boat_A_Rust">Rust makes faster boats</string>
+    
+    <string name="Liking_Q">What do you like among these choices</string>
+    <string name="Liking_A_snake">Snakes</string>
+    <string name="Liking_A_sand">To have sand in my eyes</string>
+    <string name="Liking_A_suffer">To suffer</string>
+    <string name="Liking_A_history">History</string>
+
+
 </resources>

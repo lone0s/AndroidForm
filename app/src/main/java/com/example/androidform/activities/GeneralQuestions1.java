@@ -1,8 +1,6 @@
 package com.example.androidform.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Switch;
@@ -32,7 +30,7 @@ public class GeneralQuestions1 extends Template
 
         this.data.addScore(answerScores); // Set scores to add
 
-        this.nextActivity(this, GeneralQuestions2.class);
+        this.startActivity(this, GeneralQuestions2.class);
     }
 
     @Override

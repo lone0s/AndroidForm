@@ -1,15 +1,11 @@
 package com.example.androidform.questions.activities.generics;
 
-import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 
-import com.example.androidform.DataContainer;
-import com.example.androidform.GenericQuestionActivity;
 import com.example.androidform.R;
 import com.example.androidform.core.Language;
 import com.example.androidform.questions.activities.generics.templates.RadioButtonQuestionActivity;
-import com.example.androidform.questions.lib.RadioButtonQuestion;
 
 public class BSQ_YesOrNo extends RadioButtonQuestionActivity
 {
@@ -44,6 +40,6 @@ public class BSQ_YesOrNo extends RadioButtonQuestionActivity
 
         this.data.addScore(answerScores);
 
-        this.nextActivity(this, BSQ_Boat.class);
+        this.startActivity(this, BSQ_Boat.class);
     }
 }
