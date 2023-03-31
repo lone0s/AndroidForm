@@ -93,6 +93,7 @@ public final class DataContainer implements Parcelable {
         Log.d("DataContainer", "Writing DataContainer to Parcel");
 
         parcel.writeInt(this.currentQuestion +1);
+        parcel.writeString(this.name);
         for (int[] score : this.scores) {
             parcel.writeIntArray(score);
         }
