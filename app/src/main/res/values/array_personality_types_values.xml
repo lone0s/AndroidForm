@@ -3,7 +3,6 @@
     <string-array name="personality_types_values">
         <item>Perfectionist</item>
         <item>Creator</item>
-        <item>Leader</item>
         <item>Adventurer</item>
         <item>Thinker</item>
         <item>Follower</item>

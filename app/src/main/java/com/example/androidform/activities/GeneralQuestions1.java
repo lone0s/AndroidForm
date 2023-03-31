@@ -16,13 +16,16 @@ import com.example.androidform.core.Language;
 
 public class GeneralQuestions1 extends Template
 {
+    private static final String LOGGER_TAG = "General_Information_1";
     private final int MIN_AGE = 0;
     private final int MAX_AGE = 120;
-    private TextView ageInput;
+    private EditText ageInput;
+    private TextView ageInputLabel;
     private Switch hasProgrammingExp;
     private EditText programmingExpYears;
     private TextView programmingExpYearsLabel;
     private RadioGroup professionalStatus;
+    private TextView professionalStatusLabel;
 
     public GeneralQuestions1() {
         super(R.layout.activity_general_questions_1);
@@ -32,7 +35,7 @@ public class GeneralQuestions1 extends Template
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
         if(canClickNextButton()) {
-            this.resetWidgetsColors();
+            this.resetWidgetErrors();
 
             //AgeInput
             int age = Integer.parseInt(ageInput.getText().toString());
@@ -109,6 +112,10 @@ public class GeneralQuestions1 extends Template
     }
 
     public void onCreateHook(Bundle savedInstanceState) {
+        professionalStatusLabel = findViewById(R.id.statusLabel);
+
+        ageInputLabel = findViewById(R.id.ageLabel);
+
         ageInput = findViewById(R.id.ageInput);
 
         professionalStatus = findViewById(R.id.radioGroup);
@@ -138,13 +145,13 @@ public class GeneralQuestions1 extends Template
         int parsedAge = Integer.parseInt(ageInput.getText().toString());
         //Age
         if (!isCorrectNumericInput(MIN_AGE,MAX_AGE,parsedAge)) {
-            ageInput.setTextColor(Color.RED);
+            ageInput.setError(getString(R.string.error_age));
             verifiedAll = false;
         }
         //Professional status
         if (professionalStatus.getCheckedRadioButtonId() == -1) {
             verifiedAll = false;
-            professionalStatus.setBackgroundColor(Color.RED);
+            professionalStatusLabel.setError(getString(R.string.error_professional_status));
         }
         //Prog exp
         //TODO: RAJOUTER DEFAULT VALUES A INPUTS
@@ -152,7 +159,7 @@ public class GeneralQuestions1 extends Template
            int parsedProgExp = Integer.parseInt(programmingExpYears.getText().toString());
             if((parsedAge - parsedProgExp) < 1) {
                 verifiedAll = false;
-                hasProgrammingExp.setTextColor(Color.RED);
+                programmingExpYears.setError(getString(R.string.error_experience));
             }
         }
         return verifiedAll;
@@ -164,10 +171,10 @@ public class GeneralQuestions1 extends Template
         return getString(R.string.toast_incomplete_inputs);
     }
 
-    void resetWidgetsColors() {
-        this.ageInput.setTextColor(Color.BLACK);
-        this.professionalStatus.setBackgroundColor(Color.TRANSPARENT);
-        this.programmingExpYears.setTextColor(Color.BLACK);
+    void resetWidgetErrors() {
+        this.ageInput.setError(null);
+        this.professionalStatusLabel.setError(null);
+        this.programmingExpYears.setError(null);
     }
 
     boolean isCorrectNumericInput(int min, int max, int value) {
