@@ -1,6 +1,5 @@
 package com.example.androidform.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -12,10 +11,9 @@ import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 
-import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 import com.example.androidform.Template;
-import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
+import com.example.androidform.questions.activities.generics.man_made.MCQ_Liking_Dislike;
 
 public class GeneralQuestions2 extends Template {
 
@@ -98,6 +96,6 @@ public class GeneralQuestions2 extends Template {
 
         this.data.addScore(answerScores); // Set scores to add
 
-        this.nextActivity(this, BSQ_YesOrNo.class);
+        this.startActivity(this, MCQ_Liking_Dislike.class);
     }
 }

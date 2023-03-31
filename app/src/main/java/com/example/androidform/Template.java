@@ -82,7 +82,7 @@ public abstract class Template extends AppCompatActivity {
         this.nextButtonAction(evt);
     }
 
-    protected final void nextActivity(Template self, Class<? extends Template> targetActivity)
+    protected final void startActivity(Template self, Class<? extends Template> targetActivity)
     {
         Log.i(this.LOGGER_TAG, "Creating intent for next activity");
         Intent intent = new Intent(self, targetActivity);

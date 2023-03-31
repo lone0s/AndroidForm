@@ -36,6 +36,8 @@
         </activity>
         <activity android:name=".questions.activities.generics.BSQ_YesOrNo" />
         <activity android:name=".questions.activities.generics.BSQ_Boat" />
+        <activity android:name=".questions.activities.generics.man_made.MCQ_Liking_Dislike" />
+        <activity android:name=".questions.activities.generics.man_made.UCQ_YoN_Boat" />
     </application>
 
 </manifest>

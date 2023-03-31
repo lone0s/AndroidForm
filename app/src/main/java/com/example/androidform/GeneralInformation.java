@@ -1,16 +1,10 @@
 package com.example.androidform;
 
-import android.content.Intent;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 
 import com.example.androidform.activities.GeneralQuestions1;
-import com.example.androidform.core.Language;
-import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
-import com.example.androidform.activities.MainActivity;
 
 public class GeneralInformation extends Template {
 
@@ -39,6 +33,6 @@ public class GeneralInformation extends Template {
 
         this.data.addScore(answerScores); // Set scores to add
 
-        this.nextActivity(this, GeneralQuestions1.class);
+        this.startActivity(this, GeneralQuestions1.class);
     }
 }

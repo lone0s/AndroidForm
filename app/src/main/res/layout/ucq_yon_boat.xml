@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/include4"
+        layout="@layout/activity_template"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/UCQ_YesOrNo_Q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:scaleX="@dimen/QuestionScale"
+        android:scaleY="@dimen/QuestionScale"
+        android:text="@string/YesOrNo_Q"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/UCQ_Boat_Q"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="24dp"
+        android:scaleX="1"
+        android:scaleY="1"
+        android:text="@string/Boat_Q"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_YesOrNo_A_rust" />
+
+    <RadioButton
+        android:id="@+id/UCQ_YesOrNo_A_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/YesOrNo_A_Yes"
+        app:layout_constraintBottom_toBottomOf="@+id/UCQ_YesOrNo_A_rust"
+        app:layout_constraintEnd_toStartOf="@+id/UCQ_YesOrNo_A_rust"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/UCQ_YesOrNo_A_rust" />
+
+    <RadioButton
+        android:id="@+id/UCQ_YesOrNo_A_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="@string/YesOrNo_A_No"
+        app:layout_constraintBottom_toBottomOf="@+id/UCQ_YesOrNo_A_yes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UCQ_YesOrNo_A_rust"
+        app:layout_constraintTop_toTopOf="@+id/UCQ_YesOrNo_A_yes" />
+
+    <RadioButton
+        android:id="@+id/UCQ_YesOrNo_A_rust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/YesOrNo_A_Rust"
+        app:layout_constraintEnd_toEndOf="@+id/UCQ_YesOrNo_Q"
+        app:layout_constraintStart_toStartOf="@+id/UCQ_YesOrNo_Q"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_YesOrNo_Q" />
+
+    <RadioButton
+        android:id="@+id/UCQ_Boat_A_boat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Boat_A_Boat"
+        app:layout_constraintStart_toStartOf="@+id/UCQ_Boat_Q"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_Boat_Q" />
+
+    <RadioButton
+        android:id="@+id/UCQ_Boat_A_notboat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Boat_A_NotSameBoat"
+        app:layout_constraintStart_toStartOf="@+id/UCQ_Boat_A_boat"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_Boat_A_boat" />
+
+    <RadioButton
+        android:id="@+id/UCQ_Boat_A_rust"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Boat_A_Rust"
+        app:layout_constraintStart_toStartOf="@+id/UCQ_Boat_A_pointer"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_Boat_A_pointer" />
+
+    <RadioButton
+        android:id="@+id/UCQ_Boat_A_wut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Boat_A_wut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/UCQ_Boat_A_notboat"
+        app:layout_constraintTop_toTopOf="@+id/UCQ_Boat_A_notboat" />
+
+    <RadioButton
+        android:id="@+id/UCQ_Boat_A_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/Boat_A_Pointer"
+        app:layout_constraintStart_toStartOf="@+id/UCQ_Boat_A_notboat"
+        app:layout_constraintTop_toBottomOf="@+id/UCQ_Boat_A_notboat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

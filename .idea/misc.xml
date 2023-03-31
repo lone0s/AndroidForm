@@ -5,8 +5,12 @@
       <map>
         <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/activity_generic_question.xml" value="0.18541666666666667" />
         <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/activity_generic_radioquestion.xml" value="0.1953125" />
+        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/activity_template.xml" value="0.3625" />
+        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/layout_MCQ_Liking.xml" value="0.33" />
+        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/mcq_liking.xml" value="0.33" />
+        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/mcq_liking_dislike.xml" value="0.3625" />
+        <entry key="..\:/Users/erwan/AndroidStudioProjects/AndroidForm/app/src/main/res/layout/ucq_yon_boat.xml" value="0.3625" />
         <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_information.xml" value="0.1" />
-        <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions_1.xml" value="0.25" />
         <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/Users/jeune/Documents/Fac/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_template.xml" value="0.1" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_general_questions_1.xml" value="0.1" />
