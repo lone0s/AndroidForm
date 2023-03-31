@@ -102,7 +102,7 @@ public class GeneralQuestions1 extends Template
             }
 
             this.data.addScore(answerScores); // Set scores to add
-            this.nextActivity(this, GeneralQuestions2.class);
+            this.startActivity(this, GeneralQuestions2.class);
         }
         else
             this.onInvalidFormToastText();

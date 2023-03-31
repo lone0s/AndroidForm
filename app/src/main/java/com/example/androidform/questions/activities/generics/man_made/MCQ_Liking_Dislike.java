@@ -9,7 +9,6 @@ import androidx.annotation.NonNull;
 import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
-import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 
 public final class MCQ_Liking_Dislike extends Template
 {

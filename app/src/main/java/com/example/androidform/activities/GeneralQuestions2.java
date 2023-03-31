@@ -15,6 +15,7 @@ import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.questions.activities.generics.man_made.MCQ_Liking_Dislike;
 
+
 public class GeneralQuestions2 extends Template {
 
     private static final String LOGGER_TAG = "General_Information_2";
@@ -97,5 +98,6 @@ public class GeneralQuestions2 extends Template {
         this.data.addScore(answerScores); // Set scores to add
 
         this.startActivity(this, MCQ_Liking_Dislike.class);
+
     }
 }
