@@ -143,11 +143,20 @@ public class GeneralQuestions1 extends Template
     @Override
     protected boolean canClickNextButton() {
         boolean verifiedAll = true;
-        int parsedAge = Integer.parseInt(ageInput.getText().toString());
-        //Age
-        if (!isCorrectNumericInput(MIN_AGE,MAX_AGE,parsedAge)) {
+        String age = ageInput.getText().toString();
+        int parsedAge = MIN_AGE;
+
+        if (age.isEmpty()) {
             ageInput.setError(getString(R.string.error_age));
             verifiedAll = false;
+        }
+        //Age
+        else {
+            parsedAge = Integer.parseInt(age);
+            if (!isCorrectNumericInput(MIN_AGE, MAX_AGE, parsedAge)) {
+                verifiedAll = false;
+                ageInput.setError(getString(R.string.error_age));
+            }
         }
         //Professional status
         if (professionalStatus.getCheckedRadioButtonId() == -1) {

@@ -34,7 +34,7 @@ public class GeneralQuestions2 extends Template {
     public GeneralQuestions2() {
         super(R.layout.activity_general_questions_2);
     }
-
+    //TODO : Penser a mettre les focus en auto sur les labels des inputs pour les erreurs
     @Override
     protected boolean canClickNextButton() {
         // TODO : check validite du formulaire
@@ -45,14 +45,14 @@ public class GeneralQuestions2 extends Template {
                 break;
             }
         }
-        this.labelInterests.setError(null);
+        if (!isFormValid)
+            labelInterests.setError(getText(R.string.error_interests));
         return isFormValid;
     }
 
     @NonNull
     @Override
     protected CharSequence onInvalidFormToastText() {
-        this.labelInterests.setError(getText(R.string.error_interests));
         return getString(R.string.toast_incomplete_inputs);
     }
 
@@ -74,7 +74,7 @@ public class GeneralQuestions2 extends Template {
         this.labelSocialyInaptValue = findViewById(R.id.labelSocialyInaptValue);
         this.toggleLieDetector = findViewById(R.id.toggleLieDetector);
 
-        String initialSocialyInaptValue = String.valueOf(socialyInaptBar.getProgress()) + "%";
+        String initialSocialyInaptValue = socialyInaptBar.getProgress() + "%";
         this.labelSocialyInaptValue.setText(initialSocialyInaptValue);
         this.lieDetectorEnabled = this.toggleLieDetector.isEnabled();
 
@@ -204,9 +204,12 @@ public class GeneralQuestions2 extends Template {
             answerScores[Language.toInt(Language.CS)]++;
         }
 
-
-        this.data.addScore(answerScores); // Set scores to add
-
+        resetWidgetErrors();
+        this.data.addScore(answerScores);
         this.nextActivity(this, BSQ_YesOrNo.class);
+    }
+
+    void resetWidgetErrors() {
+        this.labelInterests.setError(null);
     }
 }
