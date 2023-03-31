@@ -10,14 +10,14 @@
         android:id="@+id/MCQ_Dislike_Q"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="16dp"
         android:scaleX="@dimen/QuestionScale"
         android:scaleY="@dimen/QuestionScale"
         android:text="@string/Dislike_Q"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintHorizontal_bias="0.823"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_A_history" />
+        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_sand" />
 
     <CheckBox
         android:id="@+id/MCQ_Dislike_A_life"
@@ -89,9 +89,9 @@
         android:scaleY="@dimen/QuestionScale"
         android:text="@string/Liking_Q"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.146"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="115dp" />
+        tools:layout_editor_absoluteY="16dp" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_snake"
@@ -117,20 +117,21 @@
         android:id="@+id/MCQ_Liking_A_suffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="@string/Liking_A_suffer"
-        app:layout_constraintBottom_toBottomOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintStart_toEndOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_sand" />
+        app:layout_constraintBottom_toBottomOf="@+id/MCQ_Liking_A_history"
+        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_history" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:text="@string/Liking_A_history"
-        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_snake"
+        app:layout_constraintHorizontal_bias="0.349"
+        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_snake"
         app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_A_sand" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
