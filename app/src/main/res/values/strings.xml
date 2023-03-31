@@ -61,4 +61,6 @@
     <string name="server_Q">Does the server deserve a tip?</string>
     <string name="server_A_Yes">Hell yes!</string>
     <string name="server_A_No">What server?</string>
+
+    <string name="toast_incomplete_inputs">Some inputs are incomplete or incorrect, please verify them</string>
 </resources>

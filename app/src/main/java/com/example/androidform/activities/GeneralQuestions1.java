@@ -35,9 +35,8 @@ public class GeneralQuestions1 extends Template
             this.data.addScore(answerScores); // Set scores to add
             this.nextActivity(this, GeneralQuestions2.class);
         }
-        else {
+        else
             this.onInvalidFormToastText();
-        }
     }
 
     public void onCreateHook(Bundle savedInstanceState) {
@@ -93,7 +92,7 @@ public class GeneralQuestions1 extends Template
     @NonNull
     @Override
     protected CharSequence onInvalidFormToastText() {
-        return "TODO : insert resource here"; // TODO
+        return getString(R.string.toast_incomplete_inputs);
     }
 
     void resetWidgetsColors() {
