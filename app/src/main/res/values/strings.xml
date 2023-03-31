@@ -14,7 +14,7 @@
     <string name="status_choice_3">Student</string>
     <string name="optionInterests1">Design</string>
     <string name="optionInterests2">Practicality</string>
-    <string name="optionInterests3">Intuitivity</string>
+    <string name="optionInterests3">Versatility</string>
     <string name="optionInterests4">Efficacy</string>
     <string name="toggleLieDetector">ToggleButton</string>
     <string name="labelInterests">What attracts you ?</string>
@@ -66,5 +66,8 @@
     <string name="server_A_No">What server?</string>
 
     <string name="toast_incomplete_inputs">Some inputs are incomplete or incorrect, please verify them</string>
-
+    <string name="error_interests">Please select at least one interest</string>
+    <string name="error_age">Please enter an age that\'s between 1 and 120</string>
+    <string name="error_professional_status">Please select a professional status</string>
+    <string name="error_experience">Please put a valid experience that\'s between 0 and your age</string>
 </resources>

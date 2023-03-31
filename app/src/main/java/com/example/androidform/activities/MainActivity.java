@@ -23,13 +23,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.nameInput = findViewById(R.id.nameInput);
-
         this.findViewById(R.id.startButton).setOnClickListener(
                 (evt) ->
                 {
                     Log.d(MainActivity.LOGGER_TAG, "Start button clicked");
                     Intent intent = new Intent(this, GeneralQuestions1.class);
-                    intent.putExtra("scores", new DataContainer());
+
+                    String name = this.nameInput.getText().toString();
+                    if (name.isEmpty())
+                        name = "1337";
+                    Log.d(MainActivity.LOGGER_TAG, "Starting activity with name: " + name);
+
+                    intent.putExtra("scores", new DataContainer(this.nameInput.getText().toString()));
                     this.startActivity(intent);
                 }
         );

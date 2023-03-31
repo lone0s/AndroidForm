@@ -32,6 +32,7 @@
         android:id="@+id/labelInterests"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:focusable="auto"
         android:text="@string/labelInterests"
         app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
         app:layout_constraintEnd_toEndOf="parent"
