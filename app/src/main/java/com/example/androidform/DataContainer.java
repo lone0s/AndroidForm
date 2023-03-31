@@ -15,12 +15,14 @@ public final class DataContainer implements Parcelable {
      */
     private final int[][] scores; // length = 11
     private final int currentQuestion;
+    private final String name;
 
     public DataContainer()
     {
         Log.d("DataContainer", "Creating new DataContainer");
         this.currentQuestion = -1;
         this.scores = new int[11][0];
+        this.name = "";
     }
 
     public DataContainer(Parcel in)
@@ -28,6 +30,7 @@ public final class DataContainer implements Parcelable {
         Log.d("DataContainer", "Reading DataContainer from Parcel");
 
         this.currentQuestion = in.readInt();
+        this.name = in.readString();
 
         this.scores = new int[11][this.currentQuestion];
         //Log.d("DataContainer", String.valueOf(in.readInt()) + " " + this.currentQuestion);
@@ -46,6 +49,7 @@ public final class DataContainer implements Parcelable {
     {
         assert score.length == 11;
         assert this.currentQuestion == this.scores[0].length -1;
+
 
         for (int i = 0; i < this.scores.length; i++) {
             Log.d("DataContainer", i + " | " + this.currentQuestion);
