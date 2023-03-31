@@ -34,6 +34,7 @@ public class GeneralQuestions1 extends Template
     @Override
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
+
         if(canClickNextButton()) {
             this.resetWidgetErrors();
 
@@ -157,7 +158,7 @@ public class GeneralQuestions1 extends Template
         //TODO: RAJOUTER DEFAULT VALUES A INPUTS
         if (hasProgrammingExp.isActivated()) {
            int parsedProgExp = Integer.parseInt(programmingExpYears.getText().toString());
-            if((parsedAge - parsedProgExp) < 1) {
+            if(!isCorrectNumericInput(MIN_AGE, parsedAge, parsedAge-parsedProgExp)){
                 verifiedAll = false;
                 programmingExpYears.setError(getString(R.string.error_experience));
             }

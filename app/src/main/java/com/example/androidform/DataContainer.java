@@ -17,12 +17,12 @@ public final class DataContainer implements Parcelable {
     private final int currentQuestion;
     private final String name;
 
-    public DataContainer()
+    public DataContainer(String uname)
     {
         Log.d("DataContainer", "Creating new DataContainer");
         this.currentQuestion = -1;
         this.scores = new int[11][0];
-        this.name = "";
+        this.name = uname;
     }
 
     public DataContainer(Parcel in)
