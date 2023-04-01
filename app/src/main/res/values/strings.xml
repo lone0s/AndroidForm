@@ -76,4 +76,5 @@
     <string name="img_double_select_toast_error">You can\'t select both options</string>
     <string name="vsLabel">VERSUS</string>
     <string name="idLabel">Who do you identify the most to?</string>
+    <string name="opensourceLabel">Which one is better ?</string>
 </resources>
