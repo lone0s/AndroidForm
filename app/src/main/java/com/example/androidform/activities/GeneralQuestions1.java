@@ -34,86 +34,82 @@ public class GeneralQuestions1 extends Template
     @Override
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
+        this.resetWidgetErrors();
 
-        if(canClickNextButton()) {
-            this.resetWidgetErrors();
-
-            //AgeInput
-            int age = Integer.parseInt(ageInput.getText().toString());
-            if (age <= 20) {
-                answerScores[Language.toInt(Language.Python)]++;
-                answerScores[Language.toInt(Language.Java)]++;
-            }
-            if (age <= 40) {
-                answerScores[Language.toInt(Language.JS)]++;
-                answerScores[Language.toInt(Language.CS)]++;
-                answerScores[Language.toInt(Language.Rust)]++;
-                answerScores[Language.toInt(Language.Malbolge)]++;
-                answerScores[Language.toInt(Language.PHP)]++;
-            }
-            if (age > 40) {
-                answerScores[Language.toInt(Language.CPP)]++;
-                answerScores[Language.toInt(Language.R)]++;
-                answerScores[Language.toInt(Language.Caml)]++;
-                answerScores[Language.toInt(Language.Haskell)]++;
-            }
-
-            //Professional status
-            if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_1) {
-                answerScores[Language.toInt(Language.Python)]++;
-                answerScores[Language.toInt(Language.JS)]++;
-                answerScores[Language.toInt(Language.Malbolge)]++;
-                answerScores[Language.toInt(Language.Rust)]++;
-            }
-            else if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_2) {
-                answerScores[Language.toInt(Language.CS)]++;
-                answerScores[Language.toInt(Language.Rust)]++;
-                answerScores[Language.toInt(Language.Java)]++;
-                answerScores[Language.toInt(Language.PHP)]++;
-            }
-            else {
-                answerScores[Language.toInt(Language.CPP)]++;
-                answerScores[Language.toInt(Language.R)]++;
-                answerScores[Language.toInt(Language.Caml)]++;
-                answerScores[Language.toInt(Language.Haskell)]++;
-                answerScores[Language.toInt(Language.Java)]++;
-                answerScores[Language.toInt(Language.PHP)]++;
-            }
-
-            //Programming exp
-            if (hasProgrammingExp.isChecked()) {
-                int years = Integer.parseInt(programmingExpYears.getText().toString());
-                if (years <= 1) {
-                    answerScores[Language.toInt(Language.Python)]++;
-                    answerScores[Language.toInt(Language.JS)]++;
-                }
-                if (years <= 3) {
-                    answerScores[Language.toInt(Language.CS)]++;
-                    answerScores[Language.toInt(Language.Java)]++;
-                    answerScores[Language.toInt(Language.PHP)]++;
-                }
-                if (years > 3) {
-                    answerScores[Language.toInt(Language.Rust)]++;
-                    answerScores[Language.toInt(Language.CPP)]++;
-                    answerScores[Language.toInt(Language.R)]++;
-                    answerScores[Language.toInt(Language.Caml)]++;
-                    answerScores[Language.toInt(Language.Haskell)]++;
-                    answerScores[Language.toInt(Language.Malbolge)]++;
-                }
-            }
-            else {
-                answerScores[Language.toInt(Language.Python)]++;
-                answerScores[Language.toInt(Language.Java)]++;
-                answerScores[Language.toInt(Language.PHP)]++;
-                answerScores[Language.toInt(Language.CS)]++;
-                answerScores[Language.toInt(Language.JS)]++;
-            }
-
-            this.data.addScore(answerScores); // Set scores to add
-            this.startActivity(this, GeneralQuestions2.class);
+        //AgeInput
+        int age = Integer.parseInt(ageInput.getText().toString());
+        if (age <= 20) {
+            answerScores[Language.toInt(Language.Python)]++;
+            answerScores[Language.toInt(Language.Java)]++;
         }
-        else
-            this.onInvalidFormToastText();
+        if (age <= 40) {
+            answerScores[Language.toInt(Language.JS)]++;
+            answerScores[Language.toInt(Language.CS)]++;
+            answerScores[Language.toInt(Language.Rust)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
+            answerScores[Language.toInt(Language.PHP)]++;
+        }
+        if (age > 40) {
+            answerScores[Language.toInt(Language.CPP)]++;
+            answerScores[Language.toInt(Language.R)]++;
+            answerScores[Language.toInt(Language.Caml)]++;
+            answerScores[Language.toInt(Language.Haskell)]++;
+        }
+
+        //Professional status
+        if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_1) {
+            answerScores[Language.toInt(Language.Python)]++;
+            answerScores[Language.toInt(Language.JS)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
+            answerScores[Language.toInt(Language.Rust)]++;
+        } else if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_2) {
+            answerScores[Language.toInt(Language.CS)]++;
+            answerScores[Language.toInt(Language.Rust)]++;
+            answerScores[Language.toInt(Language.Java)]++;
+            answerScores[Language.toInt(Language.PHP)]++;
+        } else {
+            answerScores[Language.toInt(Language.CPP)]++;
+            answerScores[Language.toInt(Language.R)]++;
+            answerScores[Language.toInt(Language.Caml)]++;
+            answerScores[Language.toInt(Language.Haskell)]++;
+            answerScores[Language.toInt(Language.Java)]++;
+            answerScores[Language.toInt(Language.PHP)]++;
+        }
+
+        //Programming exp
+        //TODO : Fix issue with experience years input not needing to be verified idk why
+        if (hasProgrammingExp.isChecked()) {
+            int years = /*programmingExpYears.getText().toString().equals("") ?
+                        0 :*/
+                    Integer.parseInt(programmingExpYears.getText().toString());
+
+            if (years == 1) {
+                answerScores[Language.toInt(Language.Python)]++;
+                answerScores[Language.toInt(Language.JS)]++;
+            }
+            if (years <= 3) {
+                answerScores[Language.toInt(Language.CS)]++;
+                answerScores[Language.toInt(Language.Java)]++;
+                answerScores[Language.toInt(Language.PHP)]++;
+            }
+            if (years > 3) {
+                answerScores[Language.toInt(Language.Rust)]++;
+                answerScores[Language.toInt(Language.CPP)]++;
+                answerScores[Language.toInt(Language.R)]++;
+                answerScores[Language.toInt(Language.Caml)]++;
+                answerScores[Language.toInt(Language.Haskell)]++;
+                answerScores[Language.toInt(Language.Malbolge)]++;
+            }
+        } else {
+            answerScores[Language.toInt(Language.Python)]++;
+            answerScores[Language.toInt(Language.Java)]++;
+            answerScores[Language.toInt(Language.PHP)]++;
+            answerScores[Language.toInt(Language.CS)]++;
+            answerScores[Language.toInt(Language.JS)]++;
+        }
+
+        this.data.addScore(answerScores); // Set scores to add
+        this.startActivity(this, GeneralQuestions2.class);
     }
 
     public void onCreateHook(Bundle savedInstanceState) {
@@ -170,10 +166,18 @@ public class GeneralQuestions1 extends Template
         //Prog exp
         //TODO: RAJOUTER DEFAULT VALUES A INPUTS
         if (hasProgrammingExp.isActivated()) {
-           int parsedProgExp = Integer.parseInt(programmingExpYears.getText().toString());
-            if(!isCorrectNumericInput(MIN_AGE, parsedAge, parsedAge-parsedProgExp)){
+           int parsedProgExp = 0;
+            String progExp = programmingExpYears.getText().toString();
+            if (progExp.equals("")) {
                 verifiedAll = false;
                 programmingExpYears.setError(getString(R.string.error_experience));
+            }
+            else {
+                parsedProgExp = Integer.parseInt(progExp);
+                if(!isCorrectNumericInput(MIN_AGE, parsedAge, parsedAge-parsedProgExp)){
+                    verifiedAll = false;
+                    programmingExpYears.setError(getString(R.string.error_experience));
+                }
             }
         }
         return verifiedAll;
