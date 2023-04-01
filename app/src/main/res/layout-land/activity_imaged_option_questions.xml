@@ -20,35 +20,37 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <include
-        android:id="@+id/include5"
+        android:id="@+id/include6"
         layout="@layout/activity_template"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="-41dp"
-        tools:layout_editor_absoluteY="647dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/cyfLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="10dp"
         android:text="@string/cyfLabel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/activityName5"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="@+id/activityName5"
         app:layout_constraintTop_toBottomOf="@+id/activityName5" />
 
     <ImageView
         android:id="@+id/tekkenImg"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="8dp"
         android:background="@drawable/image_frame"
         android:scaleType="centerInside"
         android:src="@drawable/tekken"
-        app:layout_constraintBottom_toTopOf="@+id/sfImg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/activityName5"
-        app:layout_constraintVertical_bias="0.41000003" />
+        app:layout_constraintTop_toBottomOf="@+id/cyfLabel" />
 
     <TextView
         android:id="@+id/vsLabel"
@@ -57,20 +59,19 @@
         android:text="@string/vsLabel"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/include5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cyfLabel"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintBottom_toTopOf="@+id/sfImg"
+        app:layout_constraintEnd_toEndOf="@+id/tekkenImg"
+        app:layout_constraintStart_toStartOf="@+id/tekkenImg"
+        app:layout_constraintTop_toBottomOf="@+id/tekkenImg"
+        app:layout_constraintVertical_bias="0.3" />
 
     <ImageView
         android:id="@+id/sfImg"
-        android:layout_width="wrap_content"
-        android:layout_height="130dp"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="4dp"
         android:src="@drawable/streetfighter"
-        app:layout_constraintBottom_toTopOf="@+id/include5"
+        app:layout_constraintBottom_toTopOf="@+id/include6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/vsLabel"
-        app:layout_constraintVertical_bias="0.37" />
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
