@@ -1,6 +1,5 @@
 package com.example.androidform.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,12 +12,10 @@ import android.widget.ToggleButton;
 
 import androidx.annotation.NonNull;
 
-import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
-import com.example.androidform.questions.activities.generics.man_made.MCQ_Liking_Dislike;
-//import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
+
 
 public class GeneralQuestions2 extends Template {
 
@@ -206,7 +203,7 @@ public class GeneralQuestions2 extends Template {
 
         resetWidgetErrors();
         this.data.addScore(answerScores);
-        this.startActivity(this, MCQ_Liking_Dislike.class);
+        this.startActivity(this, ImagedOptionQuestions.class);
     }
 
     void resetWidgetErrors() {
