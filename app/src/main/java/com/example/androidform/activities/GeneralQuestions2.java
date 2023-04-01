@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -16,7 +17,7 @@ import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
-import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
+//import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 
 public class GeneralQuestions2 extends Template {
 
@@ -205,7 +206,7 @@ public class GeneralQuestions2 extends Template {
 
         resetWidgetErrors();
         this.data.addScore(answerScores);
-        this.nextActivity(this, BSQ_YesOrNo.class);
+        this.startActivity(this, GeneralQuestions2.class);
     }
 
     void resetWidgetErrors() {
