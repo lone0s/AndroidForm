@@ -42,10 +42,10 @@
         android:id="@+id/MCQ_Dislike_A_none"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="@string/Dislike_A_none"
         app:layout_constraintEnd_toStartOf="@+id/MCQ_Dislike_A_ugly"
-        app:layout_constraintHorizontal_bias="0.449"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toEndOf="@+id/MCQ_Dislike_A_rust"
         app:layout_constraintTop_toBottomOf="@+id/MCQ_Dislike_A_rust" />
 
@@ -53,11 +53,11 @@
         android:id="@+id/MCQ_Dislike_A_beauty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
         android:text="@string/Dislike_A_beauty"
         app:layout_constraintBottom_toBottomOf="@+id/MCQ_Dislike_A_life"
-        app:layout_constraintEnd_toEndOf="@+id/MCQ_Dislike_Q"
+        app:layout_constraintStart_toEndOf="@+id/MCQ_Dislike_A_life"
         app:layout_constraintTop_toTopOf="@+id/MCQ_Dislike_A_life"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -65,10 +65,12 @@
         android:id="@+id/MCQ_Dislike_A_ugly"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="@string/Dislike_A_ugly"
-        app:layout_constraintEnd_toEndOf="@+id/MCQ_Dislike_A_beauty"
-        app:layout_constraintStart_toStartOf="@+id/MCQ_Dislike_A_beauty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/MCQ_Dislike_A_rust"
         app:layout_constraintTop_toBottomOf="@+id/MCQ_Dislike_A_beauty" />
 
     <include
@@ -85,23 +87,23 @@
         android:id="@+id/MCQ_Liking_Q"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:scaleX="@dimen/QuestionScale"
         android:scaleY="@dimen/QuestionScale"
         android:text="@string/Liking_Q"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="115dp" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_snake"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Liking_A_snake"
-        app:layout_constraintBottom_toBottomOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintEnd_toStartOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_sand" />
+        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_A_sand" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_sand"
@@ -109,28 +111,32 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/Liking_A_sand"
-        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_Q"
-        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_Q"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_Q" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_suffer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
         android:text="@string/Liking_A_suffer"
         app:layout_constraintBottom_toBottomOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintStart_toEndOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_sand" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/MCQ_Liking_A_sand"
+        app:layout_constraintVertical_bias="0.0" />
 
     <CheckBox
         android:id="@+id/MCQ_Liking_A_history"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Liking_A_history"
-        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_sand"
-        app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_A_sand" />
+        app:layout_constraintEnd_toEndOf="@+id/MCQ_Liking_A_suffer"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="@+id/MCQ_Liking_A_suffer"
+        app:layout_constraintTop_toBottomOf="@+id/MCQ_Liking_A_suffer" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

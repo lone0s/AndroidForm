@@ -32,7 +32,6 @@
         android:id="@+id/UCQ_Boat_Q"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
         android:scaleX="1"
@@ -108,7 +107,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Boat_A_wut"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/UCQ_Boat_A_notboat"
         app:layout_constraintTop_toTopOf="@+id/UCQ_Boat_A_notboat" />
 

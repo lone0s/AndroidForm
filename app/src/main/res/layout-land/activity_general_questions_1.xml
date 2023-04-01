@@ -110,12 +110,13 @@
         android:id="@+id/switchProgExp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="80dp"
         android:minWidth="48dp"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="@+id/labelProgExp"
         app:layout_constraintEnd_toStartOf="@+id/statusLabel"
-        app:layout_constraintTop_toTopOf="@+id/labelProgExp" />
+        app:layout_constraintTop_toTopOf="@+id/labelProgExp"
+        app:layout_constraintVertical_bias="0.482" />
 
     <TextView
         android:id="@+id/labelProgExp"
