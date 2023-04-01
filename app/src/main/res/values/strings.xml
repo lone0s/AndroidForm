@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">AndroidForm</string>
+    <string name="app_name" translatable="false">whoami</string>
     <string name="startButton">Start</string>
     <string name="beforeButton">Before</string>
     <string name="nextButton">Next</string>
-    <string name="logo_name">whoami</string>
+    <string name="logo_name" translatable="false">whoami</string>
     <string name="nameInput">who are you?</string>
     <string name="nameLabel">Name</string>
     <string name="activity_name">GENERAL QUESTIONS</string>
@@ -16,20 +16,20 @@
     <string name="optionInterests2">Practicality</string>
     <string name="optionInterests3">Versatility</string>
     <string name="optionInterests4">Efficacy</string>
-    <string name="toggleLieDetector">ToggleButton</string>
-    <string name="labelInterests">What attracts you ?</string>
+    <string name="toggleLieDetector" translatable="false">ToggleButton</string>
+    <string name="labelInterests">What attracts you?</string>
     <string name="labelPersonality">You\'re more of a …</string>
-    <string name="labelSociallyInapt">How socially inapt are you ?</string>
-    <string name="labelLie">Did you lie to any questions ?</string>
-    <string name="toggleLieDetectorFalse">no</string>
-    <string name="toggleLieDetectorTrue">yes</string>
+    <string name="labelSociallyInapt">How socially inapt are you?</string>
+    <string name="labelLie">Did you lie to any questions?</string>
+    <string name="toggleLieDetectorFalse">No</string>
+    <string name="toggleLieDetectorTrue">Yes</string>
     <string name="labelProgExp">Do you have any experience with programming ?</string>
     <string name="labelProgYears">For how many years?</string>
 
     <string name="YesOrNo_Q">Yes, or No?</string>
     <string name="YesOrNo_A_Yes">Yes</string>
     <string name="YesOrNo_A_No">No</string>
-    <string name="YesOrNo_A_Rust">Rust.</string>
+    <string name="YesOrNo_A_Rust" translatable="false">Rust.</string>
 
     <string name="Boat_Q">As it travels, a boat\'s wood rots, once arrived, each piece of wood are different.</string>
     <string name="Boat_A_SameBoat">It\'s the same boat</string>
