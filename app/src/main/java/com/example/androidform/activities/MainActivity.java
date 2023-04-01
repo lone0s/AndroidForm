@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -34,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         name = "1337";
                     Log.d(MainActivity.LOGGER_TAG, "Starting activity with name: " + name);
 
-                    intent.putExtra("scores", new DataContainer(this.nameInput.getText().toString()));
+                    intent.putExtra("scores", (Parcelable) new DataContainer(this.nameInput.getText().toString()));
                     this.startActivity(intent);
                 }
         );

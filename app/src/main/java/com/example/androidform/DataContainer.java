@@ -6,9 +6,10 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.Arrays;
 
-public final class DataContainer implements Parcelable {
+public final class DataContainer implements Serializable, Parcelable {
 
     /**
      * Use Language.XXX.toInt() to get a language's index
@@ -65,7 +66,7 @@ public final class DataContainer implements Parcelable {
 
 
     /** Parcelable impl **/
-
+    
     public static final Creator<DataContainer> CREATOR = new Creator<DataContainer>()
     {
         @Override
