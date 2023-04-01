@@ -17,6 +17,7 @@ import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
+import com.example.androidform.questions.activities.generics.man_made.MCQ_Liking_Dislike;
 //import com.example.androidform.questions.activities.generics.BSQ_YesOrNo;
 
 public class GeneralQuestions2 extends Template {
@@ -206,7 +207,7 @@ public class GeneralQuestions2 extends Template {
 
         resetWidgetErrors();
         this.data.addScore(answerScores);
-        this.startActivity(this, GeneralQuestions2.class);
+        this.startActivity(this, MCQ_Liking_Dislike.class);
     }
 
     void resetWidgetErrors() {

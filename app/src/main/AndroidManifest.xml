@@ -14,11 +14,16 @@
         android:theme="@style/Theme.AndroidForm"
         tools:targetApi="31">
         <activity
+            android:name=".activities.ImagedOptionQuestions"
+            android:exported="false" />
+        <activity
             android:name=".activities.GeneralQuestions2"
             android:exported="false" />
-        <!--activity
+        <!--
+activity
             android:name=".Template"
-            android:exported="false" /-->
+            android:exported="false" /
+        -->
         <activity
             android:name=".activities.GeneralQuestions1"
             android:exported="false" />
@@ -31,10 +36,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".questions.activities.generics.man_made.MCQ_Liking_Dislike" />
         <activity android:name=".questions.activities.generics.man_made.UCQ_YoN_Boat" />
-
     </application>
 
 </manifest>
