@@ -98,6 +98,9 @@ public final class Results extends AppCompatActivity {
         ((TextView) this.findViewById(R.id.LangageName)).setText(this.getResources().getString(languageNameResourceId));
         ((ImageView) this.findViewById(R.id.languageImage)).setImageResource(imageResourceId);
         ((TextView) this.findViewById(R.id.LanguageDescription)).setText(this.getResources().getString(languageDescResourceId));
+
+        //Pour les aveugles
+        this.findViewById(R.id.languageImage).setContentDescription(this.getResources().getString(languageNameResourceId));
     }
 
     private Language getResults(int[] results)

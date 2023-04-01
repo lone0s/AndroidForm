@@ -10,20 +10,20 @@
         android:id="@+id/LangageName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="20dp"
         android:scaleX="2"
         android:scaleY="2"
         android:text="@string/DefaultLanguageName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.499"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/languageImage"
-        android:layout_width="290dp"
-        android:layout_height="290dp"
-        android:layout_marginTop="68dp"
+        android:layout_width="233dp"
+        android:layout_height="249dp"
+        app:layout_constraintBottom_toTopOf="@+id/seeHistory"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LangageName"
@@ -55,9 +55,10 @@
         android:id="@+id/LanguageDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
         android:text="@string/DefaultDescription"
+        app:layout_constraintBottom_toTopOf="@+id/seeHistory"
         app:layout_constraintEnd_toEndOf="@+id/languageImage"
         app:layout_constraintStart_toStartOf="@+id/languageImage"
-        app:layout_constraintTop_toBottomOf="@+id/languageImage" />
+        app:layout_constraintTop_toBottomOf="@+id/languageImage"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
