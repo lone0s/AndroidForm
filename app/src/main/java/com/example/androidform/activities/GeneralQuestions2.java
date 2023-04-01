@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import com.example.androidform.R;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
+import com.example.androidform.questions.activities.generics.man_made.MCQ_Liking_Dislike;
 
 
 public class GeneralQuestions2 extends Template {
@@ -112,7 +113,7 @@ public class GeneralQuestions2 extends Template {
         if (optionsInterests[0].isChecked()) {
             answerScores[Language.toInt(Language.CPP)]++;
             answerScores[Language.toInt(Language.Rust)]++;
-            answerScores[Language.toInt(Language.Malboge)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
         }
         if(optionsInterests[1].isChecked()) {
             answerScores[Language.toInt(Language.CS)]++;
@@ -148,7 +149,7 @@ public class GeneralQuestions2 extends Template {
         }
         if (personality.equals(personalities[2])) {
             answerScores[Language.toInt(Language.R)]++;
-            answerScores[Language.toInt(Language.Malboge)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
             answerScores[Language.toInt(Language.Rust)]++;
         }
         if (personality.equals(personalities[3])) {
@@ -181,7 +182,7 @@ public class GeneralQuestions2 extends Template {
             answerScores[Language.toInt(Language.Rust)]++;
             answerScores[Language.toInt(Language.Haskell)]++;
             answerScores[Language.toInt(Language.R)]++;
-            answerScores[Language.toInt(Language.Malboge)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
         }
 
         // Process lie detector
@@ -190,7 +191,7 @@ public class GeneralQuestions2 extends Template {
             answerScores[Language.toInt(Language.JS)]++;
             answerScores[Language.toInt(Language.PHP)]++;
             answerScores[Language.toInt(Language.Java)]++;
-            answerScores[Language.toInt(Language.Malboge)]++;
+            answerScores[Language.toInt(Language.Malbolge)]++;
         }
         else {
             answerScores[Language.toInt(Language.CPP)]++;
@@ -203,7 +204,7 @@ public class GeneralQuestions2 extends Template {
 
         resetWidgetErrors();
         this.data.addScore(answerScores);
-        this.startActivity(this, ImagedOptionQuestions.class);
+        this.startActivity(this, MCQ_Liking_Dislike.class);
     }
 
     void resetWidgetErrors() {

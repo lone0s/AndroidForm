@@ -5,7 +5,7 @@ public enum Language
     Rust,
     Haskell,
     Caml,
-    Malboge,
+    Malbolge,
     CPP,
     Python,
     R,
@@ -23,7 +23,7 @@ public enum Language
             case 0 : return Rust;
             case 1 : return Haskell;
             case 2 : return Caml;
-            case 3 : return Malboge;
+            case 3 : return Malbolge;
             case 4 : return CPP;
             case 5 : return Python;
             case 6 : return R;
@@ -48,7 +48,7 @@ public enum Language
             case Rust : return 0;
             case Haskell: return 1;
             case Caml: return 2;
-            case Malboge: return 3;
+            case Malbolge: return 3;
             case CPP : return 4;
             case Python : return 5;
             case R : return 6;

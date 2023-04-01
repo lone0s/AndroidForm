@@ -3,8 +3,6 @@ package com.example.androidform.activities;
 import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -83,7 +81,7 @@ public class ImagedOptionQuestions extends Template {
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
         if (tekkenSelected) {
-            answerScores[Language.Malboge.toInt()]++;
+            answerScores[Language.Malbolge.toInt()]++;
             answerScores[Language.Haskell.toInt()]++;
             answerScores[Language.Rust.toInt()]++;
             answerScores[Language.CS.toInt()]++;

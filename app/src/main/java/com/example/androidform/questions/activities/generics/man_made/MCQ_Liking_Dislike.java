@@ -132,7 +132,7 @@ public final class MCQ_Liking_Dislike extends Template
             answerScores[Language.PHP.toInt()] += 1;
             answerScores[Language.JS.toInt()] += 1;
             answerScores[Language.Rust.toInt()] += 1;
-            answerScores[Language.Malboge.toInt()] += 1;
+            answerScores[Language.Malbolge.toInt()] += 1;
         }
 
         // MCQ_Dislike
@@ -146,7 +146,7 @@ public final class MCQ_Liking_Dislike extends Template
         {
             if(((CheckBox) this.findViewById(R.id.MCQ_Dislike_A_life)).isChecked())
             {
-                answerScores[Language.Malboge.toInt()] += 1;
+                answerScores[Language.Malbolge.toInt()] += 1;
                 answerScores[Language.PHP.toInt()] += 1;
                 answerScores[Language.JS.toInt()] += 1;
                 answerScores[Language.Caml.toInt()] += 1;

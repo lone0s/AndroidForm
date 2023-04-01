@@ -126,7 +126,7 @@ public class UCQ_YoN_Boat extends Template {
             answerScores[Language.CPP.toInt()] += 1;
             answerScores[Language.CS.toInt()] += 1;
             answerScores[Language.Java.toInt()] += 1;
-            answerScores[Language.Malboge.toInt()] += 1;
+            answerScores[Language.Malbolge.toInt()] += 1;
             answerScores[Language.Rust.toInt()] += 1;
         }
         else // Answer: Rust.

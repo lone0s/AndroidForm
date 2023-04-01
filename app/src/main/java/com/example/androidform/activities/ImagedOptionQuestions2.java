@@ -1,11 +1,8 @@
 package com.example.androidform.activities;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.res.ResourcesCompat;
 
-import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -93,7 +90,7 @@ public class ImagedOptionQuestions2 extends Template {
             answerScores[Language.Java.toInt()]++;
             answerScores[Language.Python.toInt()]++;
             answerScores[Language.JS.toInt()]++;
-            answerScores[Language.Malboge.toInt()]++;
+            answerScores[Language.Malbolge.toInt()]++;
             answerScores[Language.CS.toInt()]++;
             answerScores[Language.Rust.toInt()]++;
         }

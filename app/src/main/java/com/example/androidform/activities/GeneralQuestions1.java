@@ -1,6 +1,5 @@
 package com.example.androidform.activities;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -31,6 +30,7 @@ public class GeneralQuestions1 extends Template
         super(R.layout.activity_general_questions_1);
     }
 
+    //TODO : Fix issue with experience years input not needing to be verified
     @Override
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
@@ -48,7 +48,8 @@ public class GeneralQuestions1 extends Template
                 answerScores[Language.toInt(Language.JS)]++;
                 answerScores[Language.toInt(Language.CS)]++;
                 answerScores[Language.toInt(Language.Rust)]++;
-                answerScores[Language.toInt(Language.Malboge)]++;
+                answerScores[Language.toInt(Language.Malbolge)]++;
+                answerScores[Language.toInt(Language.PHP)]++;
             }
             if (age > 40) {
                 answerScores[Language.toInt(Language.CPP)]++;
@@ -61,7 +62,7 @@ public class GeneralQuestions1 extends Template
             if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_1) {
                 answerScores[Language.toInt(Language.Python)]++;
                 answerScores[Language.toInt(Language.JS)]++;
-                answerScores[Language.toInt(Language.Malboge)]++;
+                answerScores[Language.toInt(Language.Malbolge)]++;
                 answerScores[Language.toInt(Language.Rust)]++;
             }
             else if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_2) {
@@ -97,12 +98,15 @@ public class GeneralQuestions1 extends Template
                     answerScores[Language.toInt(Language.R)]++;
                     answerScores[Language.toInt(Language.Caml)]++;
                     answerScores[Language.toInt(Language.Haskell)]++;
+                    answerScores[Language.toInt(Language.Malbolge)]++;
                 }
             }
             else {
                 answerScores[Language.toInt(Language.Python)]++;
                 answerScores[Language.toInt(Language.Java)]++;
                 answerScores[Language.toInt(Language.PHP)]++;
+                answerScores[Language.toInt(Language.CS)]++;
+                answerScores[Language.toInt(Language.JS)]++;
             }
 
             this.data.addScore(answerScores); // Set scores to add

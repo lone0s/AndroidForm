@@ -23,21 +23,25 @@
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/drawable/image_frame.xml" value="0.422" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_general_questions_1.xml" value="0.1" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_general_questions_2.xml" value="0.2998236331569665" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_imaged_option_questions.xml" value="0.33" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_imaged_option_questions.xml" value="0.1" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_imaged_option_questions2.xml" value="0.359347442680776" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_imaged_option_questions3.xml" value="0.359347442680776" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/activity_main.xml" value="0.2" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/mcq_liking_dislike.xml" value="0.359347442680776" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout-land/ucq_yon_boat.xml" value="0.359347442680776" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_information.xml" value="0.22291666666666668" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions2.xml" value="0.1403985507246377" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions_1.xml" value="0.33" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_general_questions_2.xml" value="0.3146067415730337" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_generic_question.xml" value="0.17395833333333333" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_imaged_option_questions.xml" value="0.4244791666666667" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_imaged_option_questions2.xml" value="0.67" />
-        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_imaged_option_questions3.xml" value="0.2441123188405797" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_imaged_option_questions2.xml" value="0.140893470790378" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_imaged_option_questions3.xml" value="0.13934426229508196" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_results.xml" value="0.1656534954407295" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/activity_template.xml" value="0.25" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/mcq_liking_dislike.xml" value="0.328804347826087" />
+        <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/layout/ucq_yon_boat.xml" value="0.328804347826087" />
         <entry key="..\:/ohno/Documents/FAC/M1/S2/IHM/Projets/AndroidForm/app/src/main/res/xml/image_border_frame.xml" value="0.4234375" />
       </map>
     </option>
