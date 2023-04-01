@@ -75,4 +75,5 @@
     <string name="img_no_select_toast">You must select at least one option</string>
     <string name="img_double_select_toast_error">You can\'t select both options</string>
     <string name="vsLabel">VERSUS</string>
+    <string name="idLabel">Who do you identify the most to?</string>
 </resources>

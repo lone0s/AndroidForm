@@ -37,12 +37,13 @@ public class ImagedOptionQuestions extends Template {
                     tekkenSelected = false;
                     tekken.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
                 } else {
-                    if (streetFighterSelected)
+                    if (streetFighterSelected) {
                         Toast.makeText(ImagedOptionQuestions.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                    else {
-                        tekkenSelected = true;
-                        tekken.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        streetFighterSelected = false;
                     }
+                    tekkenSelected = true;
+                    tekken.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
                 }
             }
         });
@@ -54,12 +55,13 @@ public class ImagedOptionQuestions extends Template {
                     streetFighterSelected = false;
                     streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
                 } else {
-                    if (tekkenSelected)
+                    if (tekkenSelected) {
                         Toast.makeText(ImagedOptionQuestions.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                    else {
-                        streetFighterSelected = true;
-                        streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                        tekken.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        tekkenSelected = false;
                     }
+                    streetFighterSelected = true;
+                    streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
                 }
             }
         });
@@ -95,6 +97,6 @@ public class ImagedOptionQuestions extends Template {
             answerScores[Language.Caml.toInt()]++;
         }
         this.data.addScore(answerScores);
-//        this.startActivity(this,);
+        this.startActivity(this, ImagedOptionQuestions2.class);
     }
 }
