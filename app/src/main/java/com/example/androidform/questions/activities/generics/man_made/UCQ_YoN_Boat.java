@@ -8,6 +8,7 @@ import androidx.annotation.NonNull;
 
 import com.example.androidform.R;
 import com.example.androidform.Template;
+import com.example.androidform.activities.ImagedOptionQuestions;
 import com.example.androidform.core.Language;
 
 public class UCQ_YoN_Boat extends Template {
@@ -165,6 +166,6 @@ public class UCQ_YoN_Boat extends Template {
         // Persisting data
         this.data.addScore(answerScores); // Set scores to add
 
-        //this.startActivity(this, UCQ_YoN_Boat.class); // TODO : bind au recap
+        this.startActivity(this, ImagedOptionQuestions.class);
     }
 }

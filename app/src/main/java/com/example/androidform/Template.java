@@ -86,7 +86,7 @@ public abstract class Template extends AppCompatActivity {
     {
         Log.i(this.LOGGER_TAG, "Creating intent for next activity");
         Intent intent = new Intent(self, targetActivity);
-        intent.putExtra("scores", this.data);
+        intent.putExtra("scores", (Parcelable) this.data);
 
 
         Log.i(this.LOGGER_TAG, "Starting next activity");

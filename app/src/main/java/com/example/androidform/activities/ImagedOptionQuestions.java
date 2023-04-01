@@ -1,6 +1,7 @@
 package com.example.androidform.activities;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -35,15 +36,15 @@ public class ImagedOptionQuestions extends Template {
             public void onClick(View v) {
                 if (tekkenSelected) {
                     tekkenSelected = false;
-                    tekken.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    tekken.setBackground(null);
                 } else {
                     if (streetFighterSelected) {
                         Toast.makeText(ImagedOptionQuestions.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        streetFighter.setBackground(null);
                         streetFighterSelected = false;
                     }
                     tekkenSelected = true;
-                    tekken.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    tekken.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });
@@ -53,15 +54,15 @@ public class ImagedOptionQuestions extends Template {
             public void onClick(View v) {
                 if (streetFighterSelected) {
                     streetFighterSelected = false;
-                    streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    streetFighter.setBackground(null);
                 } else {
                     if (tekkenSelected) {
                         Toast.makeText(ImagedOptionQuestions.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        tekken.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        tekken.setBackground(null);
                         tekkenSelected = false;
                     }
                     streetFighterSelected = true;
-                    streetFighter.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    streetFighter.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });

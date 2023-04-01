@@ -44,7 +44,7 @@
         android:layout_width="400sp"
         android:layout_height="100sp"
         android:layout_marginTop="8dp"
-        android:background="@drawable/image_frame"
+
         android:scaleType="centerInside"
         android:src="@drawable/tekken"
         app:layout_constraintEnd_toEndOf="parent"

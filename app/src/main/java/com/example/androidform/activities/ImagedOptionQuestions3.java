@@ -2,16 +2,20 @@ package com.example.androidform.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.androidform.R;
+import com.example.androidform.Results;
 import com.example.androidform.Template;
 import com.example.androidform.core.Language;
 
@@ -37,15 +41,15 @@ public class ImagedOptionQuestions3 extends Template {
             public void onClick(View view) {
                 if (githubSelected) {
                     githubSelected = false;
-                    github.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    github.setBackground(null);
                 } else {
                     if (gitlabSelected) {
                         Toast.makeText(ImagedOptionQuestions3.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        gitlab.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        gitlab.setBackground(null);
                         gitlabSelected = false;
                     }
                     githubSelected = true;
-                    github.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    github.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });
@@ -54,15 +58,15 @@ public class ImagedOptionQuestions3 extends Template {
             public void onClick(View view) {
                 if (gitlabSelected) {
                     gitlabSelected = false;
-                    gitlab.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    gitlab.setBackground(null);
                 } else {
                     if (githubSelected) {
                         Toast.makeText(ImagedOptionQuestions3.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        github.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        github.setBackground(null);
                         githubSelected = false;
                     }
                     gitlabSelected = true;
-                    gitlab.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    gitlab.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });
@@ -98,6 +102,9 @@ public class ImagedOptionQuestions3 extends Template {
             answerScores[Language.R.toInt()]++;
         }
         this.data.addScore(answerScores);
-        //TODO : Link to results
+
+        Intent intent = new Intent(this, Results.class);
+        intent.putExtra("scores", (Parcelable)this.data);
+        this.startActivity(intent);
     }
 }

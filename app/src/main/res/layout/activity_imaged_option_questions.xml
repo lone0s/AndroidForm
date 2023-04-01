@@ -24,8 +24,9 @@
         layout="@layout/activity_template"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="-41dp"
-        tools:layout_editor_absoluteY="647dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/cyfLabel"
@@ -41,7 +42,6 @@
         android:id="@+id/tekkenImg"
         android:layout_width="wrap_content"
         android:layout_height="130dp"
-        android:background="@drawable/image_frame"
         android:scaleType="centerInside"
         android:src="@drawable/tekken"
         app:layout_constraintBottom_toTopOf="@+id/sfImg"

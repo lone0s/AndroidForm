@@ -2,6 +2,7 @@ package com.example.androidform.activities;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 import android.content.res.ColorStateList;
 import android.graphics.Color;
@@ -36,15 +37,15 @@ public class ImagedOptionQuestions2 extends Template {
             public void onClick(View view) {
                 if (matrixSelected) {
                     matrixSelected = false;
-                    matrix.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    matrix.setBackground(null);
                 } else {
                     if (mrRobotSelected) {
                         Toast.makeText(ImagedOptionQuestions2.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        mrRobot.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        mrRobot.setBackground(null);
                         mrRobotSelected = false;
                     }
                     matrixSelected = true;
-                    matrix.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    matrix.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });
@@ -53,15 +54,15 @@ public class ImagedOptionQuestions2 extends Template {
             public void onClick(View view) {
                 if (mrRobotSelected) {
                     mrRobotSelected = false;
-                    mrRobot.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                    mrRobot.setBackground(null);
                 } else {
                     if (matrixSelected) {
                         Toast.makeText(ImagedOptionQuestions2.this, R.string.img_double_select_toast_error, Toast.LENGTH_SHORT).show();
-                        matrix.setBackgroundTintList(ColorStateList.valueOf(Color.TRANSPARENT));
+                        matrix.setBackground(null);
                         matrixSelected = false;
                     }
                     mrRobotSelected = true;
-                    mrRobot.setBackgroundTintList(ColorStateList.valueOf(Color.BLACK));
+                    mrRobot.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.image_frame,null));
                 }
             }
         });
