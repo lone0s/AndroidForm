@@ -38,7 +38,6 @@ public class GeneralQuestions2 extends Template {
     //TODO : Penser a mettre les focus en auto sur les labels des inputs pour les erreurs
     @Override
     protected boolean canClickNextButton() {
-        // TODO : check validite du formulaire
         boolean isFormValid = false;
         for (CheckBox option : optionsInterests) {
             if (option.isChecked()) {
