@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.androidform.R;
 import com.example.androidform.Template;
+import com.example.androidform.core.Language;
 
 public class ImagedOptionQuestions3 extends Template {
 
@@ -80,6 +81,23 @@ public class ImagedOptionQuestions3 extends Template {
 
     @Override
     protected void nextButtonAction(View evt) {
-
+        int[] answerScores = new int[11];
+        if (githubSelected) {
+            answerScores[Language.CS.toInt()]++;
+            answerScores[Language.Java.toInt()]++;
+            answerScores[Language.Python.toInt()]++;
+            answerScores[Language.PHP.toInt()]++;
+            answerScores[Language.JS.toInt()]++;
+        }
+        else {
+            answerScores[Language.Malboge.toInt()]++;
+            answerScores[Language.CPP.toInt()]++;
+            answerScores[Language.Haskell.toInt()]++;
+            answerScores[Language.Caml.toInt()]++;
+            answerScores[Language.Rust.toInt()]++;
+            answerScores[Language.R.toInt()]++;
+        }
+        this.data.addScore(answerScores);
+        //TODO : Link to results
     }
 }
