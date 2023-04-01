@@ -58,10 +58,16 @@ public final class DataContainer implements Serializable, Parcelable {
         }
     }
 
-    public int[][] getResults()
+    public int[] getResults()
     {
-        // Stream::reduce marche po
-        return Arrays.copyOf(this.scores, this.scores.length);
+        int[] results = new int[this.scores.length];
+        for (int i = 0; i < this.scores.length; i++) {
+            for (int score : this.scores[i]) {
+                results[i] += score;
+            }
+        }
+
+        return results;
     }
 
 

@@ -14,6 +14,28 @@ public enum Language
     Java,
     CS;
 
+    public static Language fromInt(int i) {
+        assert i >= 0;
+        assert i <= 10;
+
+        switch (i)
+        {
+            case 0 : return Rust;
+            case 1 : return Haskell;
+            case 2 : return Caml;
+            case 3 : return Malboge;
+            case 4 : return CPP;
+            case 5 : return Python;
+            case 6 : return R;
+            case 7 : return JS;
+            case 8 : return PHP;
+            case 9 : return Java;
+            case 10 : return CS;
+        }
+
+        return null;
+    }
+
     public int toInt()
     {
         return Language.toInt(this);

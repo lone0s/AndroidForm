@@ -57,4 +57,5 @@
     <string name="error_age">Vous avez sûrement entre 1 et 120 ans, non ?</string>
     <string name="error_professional_status">Veuillez sélectionner un status</string>
     <string name="error_experience">Veuillez rentrer une durée d\'expérience comprise entre 0 et votre age</string>
+    <string name="Boat_Q">Au cours de ses voyages, tous les bouts d\'un bateau ont étés remplacés par de nouveaux morceaux</string>
 </resources>

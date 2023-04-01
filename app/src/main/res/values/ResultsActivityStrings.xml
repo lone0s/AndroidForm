@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Languages-->
+    <string name="RustName" translatable="false">Rust</string>
+    <string name="PHPName" translatable="false">PHP</string>
+    <string name="HaskellName" translatable="false">Haskell</string>
+    <string name="CamlName" translatable="false">Caml</string>
+    <string name="MalbogeName" translatable="false">Malboge</string>
+    <string name="CPPName" translatable="false">C++</string>
+    <string name="PythonName" translatable="false">Python</string>
+    <string name="RName" translatable="false">R</string>
+    <string name="JSName" translatable="false">Javascript</string>
+    <string name="JavaName" translatable="false">Java</string>
+    <string name="CSName" translatable="false">C#</string>
+
+    <!--Desprictions-->
+    <string name="RustDesc">#DescriptionHere#</string>
+    <string name="PHPDesc">#DescriptionHere#</string>
+    <string name="HaskellDesc">#DescriptionHere#</string>
+    <string name="CamlDesc">#DescriptionHere#</string>
+    <string name="MalbogeDesc">#DescriptionHere#</string>
+    <string name="CPPDesc">#DescriptionHere#</string>
+    <string name="PythonDesc">#DescriptionHere#</string>
+    <string name="RDesc">#DescriptionHere#</string>
+    <string name="JSDesc">#DescriptionHere#</string>
+    <string name="JavaDesc">#DescriptionHere#</string>
+    <string name="CSDesc">#DescriptionHere#</string>
+
+    <!--Other-->
+    <string name="DefaultLanguageName">An error has occurred</string>
+    <string name="DefaultDescription">An error has occurred</string>
+    <string name="LoadSaveButtonText">Load former results</string>
+    <string name="QuitButtonText">Exit</string>
+</resources>

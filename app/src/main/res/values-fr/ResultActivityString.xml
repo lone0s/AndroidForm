@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Descriptions-->
+    <string name="RustDesc">#DescriptionHere#</string>
+    <string name="PHPDesc">#DescriptionHere#</string>
+    <string name="HaskellDesc">#DescriptionHere#</string>
+    <string name="CamlDesc">#DescriptionHere#</string>
+    <string name="MalbogeDesc">#DescriptionHere#</string>
+    <string name="CPPDesc">#DescriptionHere#</string>
+    <string name="PythonDesc">#DescriptionHere#</string>
+    <string name="RDesc">#DescriptionHere#</string>
+    <string name="JSDesc">#DescriptionHere#</string>
+    <string name="JavaDesc">#DescriptionHere#</string>
+    <string name="CSDesc">#DescriptionHere#</string>
+
+    <!--Other-->
+    <string name="DefaultLanguageName">Une erreur est survenue</string>
+    <string name="DefaultDescription">Une erreur est survenue</string>
+    <string name="LoadSaveButtonText">Résultats précédents</string>
+    <string name="QuitButtonText">Quitter</string>
+</resources>
