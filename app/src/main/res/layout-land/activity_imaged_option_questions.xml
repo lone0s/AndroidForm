@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImagedOptionQuestions">
+
+    <TextView
+        android:id="@+id/activityName5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/activity_name_imaged_1"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include6"
+        layout="@layout/activity_template"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cyfLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cyfLabel"
+        app:layout_constraintEnd_toEndOf="@+id/activityName5"
+        app:layout_constraintHorizontal_bias="0.615"
+        app:layout_constraintStart_toStartOf="@+id/activityName5"
+        app:layout_constraintTop_toBottomOf="@+id/activityName5" />
+
+    <ImageView
+        android:id="@+id/tekkenImg"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/image_frame"
+        android:scaleType="centerInside"
+        android:src="@drawable/tekken"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cyfLabel" />
+
+    <TextView
+        android:id="@+id/vsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vsLabel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/sfImg"
+        app:layout_constraintEnd_toEndOf="@+id/tekkenImg"
+        app:layout_constraintStart_toStartOf="@+id/tekkenImg"
+        app:layout_constraintTop_toBottomOf="@+id/tekkenImg"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <ImageView
+        android:id="@+id/sfImg"
+        android:layout_width="400sp"
+        android:layout_height="100sp"
+        android:layout_marginBottom="4dp"
+        android:src="@drawable/streetfighter"
+        app:layout_constraintBottom_toTopOf="@+id/include6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

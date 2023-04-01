@@ -70,4 +70,11 @@
     <string name="error_age">Please enter an age that\'s between 1 and 120</string>
     <string name="error_professional_status">Please select a professional status</string>
     <string name="error_experience">Please put a valid experience that\'s between 0 and your age</string>
+    <string name="activity_name_imaged_1">IMAGED QUESTIONS</string>
+    <string name="cyfLabel">Choose your fighter...</string>
+    <string name="img_no_select_toast">You must select at least one option</string>
+    <string name="img_double_select_toast_error">You can\'t select both options</string>
+    <string name="vsLabel">VERSUS</string>
+    <string name="idLabel">Who do you identify the most to?</string>
+    <string name="opensourceLabel">Which one is better ?</string>
 </resources>

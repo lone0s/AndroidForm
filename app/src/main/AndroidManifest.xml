@@ -17,6 +17,12 @@
             android:name=".Results"
             android:exported="false" />
         <activity
+            android:name=".ImagedOptionQuestions3"
+            android:exported="false" />
+        <activity
+            android:name=".ImagedOptionQuestions2"
+            android:exported="false" />
+        <activity
             android:name=".activities.ImagedOptionQuestions"
             android:exported="false" />
         <activity

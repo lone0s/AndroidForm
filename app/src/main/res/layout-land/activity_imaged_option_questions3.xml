@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.ImagedOptionQuestions3">
+
+    <TextView
+        android:id="@+id/activityName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/activity_name_imaged_1"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <include
+        android:id="@+id/include8"
+        layout="@layout/activity_template"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/opensourceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/opensourceLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activityName3" />
+
+    <ImageView
+        android:id="@+id/githubImg"
+        android:layout_width="191dp"
+        android:layout_height="189dp"
+        android:background="@drawable/image_frame"
+        android:scaleType="fitCenter"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toTopOf="@+id/include8"
+        app:layout_constraintEnd_toStartOf="@+id/opensourceLabel"
+        app:layout_constraintHorizontal_bias="0.77"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/opensourceLabel"
+        app:srcCompat="@drawable/github" />
+
+    <TextView
+        android:id="@+id/vsLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vsLabel"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/include8"
+        app:layout_constraintEnd_toStartOf="@+id/gitlabImg"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toEndOf="@+id/githubImg"
+        app:layout_constraintTop_toBottomOf="@+id/opensourceLabel" />
+
+    <ImageView
+        android:id="@+id/gitlabImg"
+        android:layout_width="201dp"
+        android:layout_height="189dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/image_frame"
+        android:scaleType="fitCenter"
+        android:scaleX="1"
+        android:scaleY="1"
+        app:layout_constraintBottom_toTopOf="@+id/include8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toEndOf="@+id/opensourceLabel"
+        app:layout_constraintTop_toBottomOf="@+id/opensourceLabel"
+        app:srcCompat="@drawable/gitlab" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
