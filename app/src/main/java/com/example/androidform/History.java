@@ -11,13 +11,14 @@ public class History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-        DataContainer[] dc = ((DataContainer[]) this.getIntent().getParcelableArrayExtra("scoresArray"));
+       /* DataContainer[] dc = ((DataContainer[]) this.getIntent().getParcelableArrayExtra("scoresArray"));
 
-        for (DataContainer dataContainer : dc) {
+        for (DataContainer dataContainer : dc)
+        {
             // TODO :
             // - Creer un fragment representant un DataContainer
             // - Injecter le composant dans R.id.dataContainerContainer
-        }
+        }*/
 
         this.findViewById(R.id.BackButton).setOnClickListener(
                 (evt) -> this.finish()

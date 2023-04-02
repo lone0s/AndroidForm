@@ -157,7 +157,6 @@ public final class Results extends AppCompatActivity {
 
     }
 
-
     private void QuitButtonAction(View o)
     {
         this.finishAffinity(); // Kills the application
