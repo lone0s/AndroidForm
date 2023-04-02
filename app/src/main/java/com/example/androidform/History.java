@@ -11,7 +11,7 @@ public class History extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history);
 
-       /* DataContainer[] dc = ((DataContainer[]) this.getIntent().getParcelableArrayExtra("scoresArray"));
+       /* DataContainer[] dc = ((DataContainer[]) this.getIntent().getParcelableArrayExtra("scoresArray")); // Erreur de cast
 
         for (DataContainer dataContainer : dc)
         {
