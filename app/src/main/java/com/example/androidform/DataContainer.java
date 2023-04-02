@@ -18,6 +18,11 @@ public final class DataContainer implements Serializable, Parcelable {
     private final int currentQuestion;
     private final String name;
 
+    public String getName()
+    {
+        return this.name;
+    }
+
     public DataContainer(String uname)
     {
         Log.d("DataContainer", "Creating new DataContainer");
@@ -104,5 +109,11 @@ public final class DataContainer implements Serializable, Parcelable {
         for (int[] score : this.scores) {
             parcel.writeIntArray(score);
         }
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return this.name + "> " + Arrays.deepToString(this.scores);
     }
 }

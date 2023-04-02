@@ -2,12 +2,22 @@ package com.example.androidform;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.androidform.core.Language;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.util.Arrays;
 
 public final class Results extends AppCompatActivity {
 
@@ -22,7 +32,11 @@ public final class Results extends AppCompatActivity {
         DataContainer dc = this.getIntent().getParcelableExtra("scores");
         int[] results = dc.getResults();
 
-        this.saveResults(dc);
+        try {
+            this.saveResults(dc);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Language winner = this.getResults(results);
 
         this.initView(winner);
@@ -127,8 +141,20 @@ public final class Results extends AppCompatActivity {
         return winner;
     }
 
-    private void saveResults(DataContainer dc)
-    {
+    private void saveResults(DataContainer dc) throws IOException {
+        Context context = this.getApplicationContext();
+        File file = new File(context.getFilesDir(), dc.getName());
+
+        Log.i("Results", "Writing to phone storage");
+        try {
+            FileOutputStream fos = context.openFileOutput("myObject.dat", Context.MODE_PRIVATE);
+            ObjectOutputStream oos = new ObjectOutputStream(fos);
+            oos.writeObject(dc);
+            oos.close();
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -140,6 +166,27 @@ public final class Results extends AppCompatActivity {
 
     private void SeeHistoryButton(View o)
     {
-        // Lancer une activite dediee
+        Log.i("Results", "Loading DataContainers from phone storage");
+
+        File[] files = this.getApplicationContext().getFilesDir().listFiles();
+        Log.i("Results", "Found files : " + Arrays.deepToString(files));
+
+        assert files != null;
+        DataContainer[] dc = new DataContainer[files.length];
+
+        for (int i = 0; i < dc.length; i++) {
+            try {
+                FileInputStream fis = this.getApplicationContext().openFileInput(files[i].getName());
+                ObjectInputStream ois = new ObjectInputStream(fis);
+                dc[i] = (DataContainer) ois.readObject();
+                Log.i("Results", "Read file containing the following data: " + dc[i].toString());
+                ois.close();
+                fis.close();
+            } catch (IOException | ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        }
+        Log.d("Results", "History files read");
+
     }
 }
