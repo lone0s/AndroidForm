@@ -34,6 +34,11 @@ public class GeneralQuestions1 extends Template
     @Override
     protected void nextButtonAction(View evt) {
         int[] answerScores = new int[11];
+        if (data.getName().equals("Hakim"))
+            answerScores[Language.CPP.toInt()] += 3;
+        if (data.getName().equals("Xavier"))
+            answerScores[Language.Java.toInt()] += 3;
+
         this.resetWidgetErrors();
 
         //AgeInput
@@ -41,16 +46,16 @@ public class GeneralQuestions1 extends Template
         if (age <= 20) {
             answerScores[Language.toInt(Language.Python)]++;
             answerScores[Language.toInt(Language.Java)]++;
+            answerScores[Language.toInt(Language.Rust)]++;
         }
-        if (age <= 40) {
+        if (age <= 50) {
             answerScores[Language.toInt(Language.JS)]++;
             answerScores[Language.toInt(Language.CS)]++;
-            answerScores[Language.toInt(Language.Rust)]++;
-            answerScores[Language.toInt(Language.Malbolge)]++;
+            answerScores[Language.toInt(Language.CPP)]++;
             answerScores[Language.toInt(Language.PHP)]++;
         }
-        if (age > 40) {
-            answerScores[Language.toInt(Language.CPP)]++;
+        if (age > 50) {
+            answerScores[Language.toInt(Language.Malbolge)]++;
             answerScores[Language.toInt(Language.R)]++;
             answerScores[Language.toInt(Language.Caml)]++;
             answerScores[Language.toInt(Language.Haskell)]++;
@@ -64,7 +69,6 @@ public class GeneralQuestions1 extends Template
             answerScores[Language.toInt(Language.Rust)]++;
         } else if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_2) {
             answerScores[Language.toInt(Language.CS)]++;
-            answerScores[Language.toInt(Language.Rust)]++;
             answerScores[Language.toInt(Language.Java)]++;
             answerScores[Language.toInt(Language.PHP)]++;
         } else {
@@ -72,8 +76,6 @@ public class GeneralQuestions1 extends Template
             answerScores[Language.toInt(Language.R)]++;
             answerScores[Language.toInt(Language.Caml)]++;
             answerScores[Language.toInt(Language.Haskell)]++;
-            answerScores[Language.toInt(Language.Java)]++;
-            answerScores[Language.toInt(Language.PHP)]++;
         }
 
         //Programming exp

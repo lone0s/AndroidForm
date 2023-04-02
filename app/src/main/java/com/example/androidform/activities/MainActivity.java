@@ -7,9 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
-import android.view.View;
 import android.widget.EditText;
-
 import com.example.androidform.DataContainer;
 import com.example.androidform.R;
 
@@ -29,13 +27,12 @@ public class MainActivity extends AppCompatActivity {
                 {
                     Log.d(MainActivity.LOGGER_TAG, "Start button clicked");
                     Intent intent = new Intent(this, GeneralQuestions1.class);
-
                     String name = this.nameInput.getText().toString();
                     if (name.isEmpty())
-                        name = "1337";
+                        name = "anon";
                     Log.d(MainActivity.LOGGER_TAG, "Starting activity with name: " + name);
-
-                    intent.putExtra("scores", (Parcelable) new DataContainer(this.nameInput.getText().toString()));
+                    DataContainer dc = new DataContainer(name);
+                    intent.putExtra("scores", (Parcelable) dc);
                     this.startActivity(intent);
                 }
         );
