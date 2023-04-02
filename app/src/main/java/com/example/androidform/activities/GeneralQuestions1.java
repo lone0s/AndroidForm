@@ -66,17 +66,19 @@ public class GeneralQuestions1 extends Template
             answerScores[Language.toInt(Language.Python)]++;
             answerScores[Language.toInt(Language.JS)]++;
             answerScores[Language.toInt(Language.Malbolge)]++;
-            answerScores[Language.toInt(Language.Rust)]++;
+
         } else if (professionalStatus.getCheckedRadioButtonId() == R.id.status_rb_2) {
-            answerScores[Language.toInt(Language.CS)]++;
-            answerScores[Language.toInt(Language.Java)]++;
-            answerScores[Language.toInt(Language.PHP)]++;
-        } else {
             answerScores[Language.toInt(Language.CPP)]++;
             answerScores[Language.toInt(Language.R)]++;
             answerScores[Language.toInt(Language.Caml)]++;
             answerScores[Language.toInt(Language.Haskell)]++;
+        } else {
+            answerScores[Language.toInt(Language.Rust)]++;
+            answerScores[Language.toInt(Language.CS)]++;
+            answerScores[Language.toInt(Language.Java)]++;
+            answerScores[Language.toInt(Language.PHP)]++;
         }
+
 
         //Programming exp
         //TODO : Fix issue with experience years input not needing to be verified idk why
