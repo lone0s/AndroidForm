@@ -3,6 +3,7 @@ package com.example.androidform;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -142,12 +143,10 @@ public final class Results extends AppCompatActivity {
     }
 
     private void saveResults(DataContainer dc) throws IOException {
-        Context context = this.getApplicationContext();
-        File file = new File(context.getFilesDir(), dc.getName());
 
         Log.i("Results", "Writing to phone storage");
         try {
-            FileOutputStream fos = context.openFileOutput("myObject.dat", Context.MODE_PRIVATE);
+            FileOutputStream fos = this.getApplicationContext().openFileOutput("myObject.dat", Context.MODE_PRIVATE);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(dc);
             oos.close();
@@ -188,5 +187,10 @@ public final class Results extends AppCompatActivity {
         }
         Log.d("Results", "History files read");
 
+        Intent nextActivity = new Intent(this, History.class);
+
+        nextActivity.putExtra("scoresArray", dc);
+
+        this.startActivity(nextActivity);
     }
 }
