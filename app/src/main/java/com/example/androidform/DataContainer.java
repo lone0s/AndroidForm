@@ -106,6 +106,12 @@ public final class DataContainer implements Serializable, Parcelable {
         }
     }
 
+    @NonNull
+    @Override
+    public String toString() {
+        return this.name + "> " + Arrays.deepToString(this.scores);
+    }
+
     public String getName() {
         return name;
     }
