@@ -105,4 +105,8 @@ public final class DataContainer implements Serializable, Parcelable {
             parcel.writeIntArray(score);
         }
     }
+
+    public String getName() {
+        return name;
+    }
 }

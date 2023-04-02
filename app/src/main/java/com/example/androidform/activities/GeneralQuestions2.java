@@ -125,6 +125,8 @@ public class GeneralQuestions2 extends Template {
             answerScores[Language.toInt(Language.Caml)]++;
             answerScores[Language.toInt(Language.Python)]++;
             answerScores[Language.toInt(Language.JS)]++;
+            answerScores[Language.toInt(Language.Rust)]++;
+            answerScores[Language.toInt(Language.CPP)]++;
         }
         if (optionsInterests[3].isChecked()) {
             answerScores[Language.toInt(Language.Haskell)]++;
