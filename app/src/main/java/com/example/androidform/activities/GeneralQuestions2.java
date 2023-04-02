@@ -33,19 +33,18 @@ public class GeneralQuestions2 extends Template {
     public GeneralQuestions2() {
         super(R.layout.activity_general_questions_2);
     }
-    //TODO : Penser a mettre les focus en auto sur les labels des inputs pour les erreurs
     @Override
     protected boolean canClickNextButton() {
-        boolean isFormValid = false;
+        boolean isGroupValid = false;
         for (CheckBox option : optionsInterests) {
             if (option.isChecked()) {
-                isFormValid = true;
+                isGroupValid = true;
                 break;
             }
         }
-        if (!isFormValid)
+        if (!isGroupValid)
             labelInterests.setError(getText(R.string.error_interests));
-        return isFormValid;
+        return isGroupValid;
     }
 
     @NonNull

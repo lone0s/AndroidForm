@@ -1,6 +1,7 @@
 package com.example.androidform.activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
@@ -81,11 +82,14 @@ public class GeneralQuestions1 extends Template
 
 
         //Programming exp
-        //TODO : Fix issue with experience years input not needing to be verified idk why
         if (hasProgrammingExp.isChecked()) {
-            int years = /*programmingExpYears.getText().toString().equals("") ?
-                        0 :*/
-                    Integer.parseInt(programmingExpYears.getText().toString());
+            // HOTFIX : Fix issue with experience years input not going through verification before
+            // getting parsed
+            if (programmingExpYears.getText().toString().equals("")) {
+                programmingExpYears.setError(getString(R.string.error_age));
+                return;
+            }
+            int years = Integer.parseInt(programmingExpYears.getText().toString());
 
             if (years == 1) {
                 answerScores[Language.toInt(Language.Python)]++;
@@ -170,15 +174,17 @@ public class GeneralQuestions1 extends Template
         //Prog exp
         //TODO: RAJOUTER DEFAULT VALUES A INPUTS
         if (hasProgrammingExp.isActivated()) {
+            Log.d(LOGGER_TAG, "hasProgrammingExp.isActivated() = " + hasProgrammingExp.isActivated());
            int parsedProgExp = 0;
             String progExp = programmingExpYears.getText().toString();
             if (progExp.equals("")) {
+                Log.d(LOGGER_TAG, "progExp.equals(\"\") = " + progExp.equals(""));
                 verifiedAll = false;
                 programmingExpYears.setError(getString(R.string.error_experience));
             }
             else {
                 parsedProgExp = Integer.parseInt(progExp);
-                if(!isCorrectNumericInput(MIN_AGE, parsedAge, parsedAge-parsedProgExp)){
+                if(parsedAge - parsedProgExp <= 0) {
                     verifiedAll = false;
                     programmingExpYears.setError(getString(R.string.error_experience));
                 }
